@@ -99,7 +99,7 @@ const toggleShowLang = () =>
   width: 95%;
   margin-right: auto;
   margin-left: auto;
-  height: 70px;
+  height: 50px;
   border-radius: 10px;
   .languages-cont {
     display: flex;
@@ -126,7 +126,7 @@ const toggleShowLang = () =>
     background: rgba(20, 50, 90, 00.19);
     border-radius: 10px 0px 0px 10px;
     .menu-icon {
-      width: 50px;
+      width: 40px;
       cursor: pointer;
     }
   }
@@ -139,7 +139,7 @@ const toggleShowLang = () =>
     height: 100%;
     background: #1c293c;
     .menu-icon {
-      width: 50px;
+      width: 40px;
     }
     .menu-indicator {
       color: white;

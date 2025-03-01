@@ -44,7 +44,7 @@ import { RouterLink } from 'vue-router'
 <style lang="scss" scoped>
 .footer {
   width: auto;
-  height: 70px;
+  height: 50px;
   border: 1px solid rgba(244, 244, 244, 0.2);
   border-radius: 10px;
   background: #030a0f;
@@ -56,23 +56,23 @@ import { RouterLink } from 'vue-router'
     display: flex;
     justify-content: space-evenly;
     width: auto;
-    height: 70px;
-    transform: translateY(-70px);
+    height: 60px;
+    transform: translateY(-30px);
     margin-left: 20px;
     margin-right: 20px;
     .item {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100px;
-      height: 130px;
+      width: 70px;
+      height: 70px;
       background: transparent;
       transition: 00.8s;
       .icon {
         margin-left: 5px;
         margin-right: 5px;
-        width: 70px;
-        height: 70px;
+        width: 56px;
+        height: 56px;
         border-radius: 10px;
         transition: 00.4s;
       }
@@ -84,7 +84,28 @@ import { RouterLink } from 'vue-router'
     }
   }
 }
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 800px) {
+  .footer {
+    height: 70px;
+    .items {
+      transform: translateY(-10px);
+      margin-left: 10px;
+      margin-right: 10px;
+
+      .item {
+        width: 76px;
+        height: 76px;
+        .icon {
+          width: 55px;
+          height: 55px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
   .footer {
     height: 70px;
     .items {
