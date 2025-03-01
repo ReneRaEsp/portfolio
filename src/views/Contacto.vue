@@ -77,14 +77,14 @@ import MaxiCard from './../components/contact/MaxiCard.vue'
     overflow-y: auto;
     .left {
       width: 50%;
-      height: 100%;
+      height: auto;
       background: rgba(202, 242, 262, 0);
       border-radius: 0px 0 0px 0px;
       border: 1px solid rgba(202, 242, 262, 0.3);
     }
     .right {
       width: 50%;
-      height: 100%;
+      height: auto;
       background: rgba(202, 242, 262, 0);
       border-radius: 0px 40px 40px 0px;
       border: 1px solid rgba(202, 242, 262, 0.3);
@@ -97,14 +97,14 @@ import MaxiCard from './../components/contact/MaxiCard.vue'
     .contact-glass {
       .left {
         width: 100%;
-        height: 700px;
+        height: auto;
         background: rgba(202, 242, 262, 0);
         border-radius: 0px 0 0px 0px;
         border: 1px solid rgba(202, 242, 262, 0.3);
       }
       .right {
         width: 100%;
-        height: 700px;
+        height: auto;
         background: rgba(202, 242, 262, 0);
         border-radius: 0px 0px 0px 0px;
         border: 1px solid rgba(202, 242, 262, 0.3);

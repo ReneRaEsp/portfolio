@@ -30,6 +30,7 @@ const copyText = async (text) => {
 
 <style lang="scss" scoped>
 .copy-cont {
+  position: relative;
   .copy-text {
     font-size: 12px;
     position: absolute;
@@ -38,6 +39,7 @@ const copyText = async (text) => {
     font-weight: 600;
     color: white;
     border-radius: 4px;
+    transform: translateX(-50%);
   }
   .copy-image {
     cursor: pointer;

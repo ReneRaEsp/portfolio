@@ -7,7 +7,12 @@
       <a class="link" :href="link" target="_blank"> {{ text }} </a>
     </div>
     <div v-if="image" class="img"><img :src="image" alt="" /></div>
-    <Copy v-else-if="link" :textToCopy="text" />
+    <div v-else-if="link" class="copy-cont">
+      <Copy :textToCopy="text" />
+    </div>
+    <div v-if="image" class="copy-cont-mobile">
+      <Copy :textToCopy="text" />
+    </div>
   </div>
 </template>
 
@@ -58,6 +63,13 @@ const props = defineProps({
     text-decoration: none;
     color: #30a567;
   }
+  .copy-cont {
+    margin: auto;
+    width: 10%;
+  }
+  .copy-cont-mobile {
+    display: none;
+  }
 }
 
 .title-complete {
@@ -72,5 +84,25 @@ const props = defineProps({
 }
 .text-with-image {
   width: 60%;
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    .title {
+      width: 30%;
+    }
+    .text {
+      display: flex;
+      justify-content: flex-end;
+      width: 60%;
+      padding: 0px;
+    }
+    .img {
+      display: none;
+    }
+    .copy-cont-mobile {
+      display: flex;
+    }
+  }
 }
 </style>
