@@ -25,8 +25,7 @@ import Footer from './components/Footer.vue'
 
   .dinamic-secction {
     width: 100%;
-    height: 85%;
-    background: rgba(20, 50, 90, 00.19);
+    height: 85vh;
   }
 }
 </style>
