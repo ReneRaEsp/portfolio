@@ -7,22 +7,22 @@
       </div>
       <router-link to="/">
         <div class="item" @click="toggleShowMenu">
-          <img src="/img/icons/perfil.png" alt="" /> Perfil
+          <img src="/img/icons/perfil.png" alt="" /> {{ $t('profile') }}
         </div></router-link
       >
       <router-link to="/resume">
         <div class="item" @click="toggleShowMenu">
-          <img src="/img/icons/resume.png" alt="" /> Resumen
+          <img src="/img/icons/resume.png" alt="" /> {{ $t('resume') }}
         </div></router-link
       >
       <router-link to="/portfolio">
         <div class="item" @click="toggleShowMenu">
-          <img src="/img/icons/portfolio.png" alt="" /> Portafolio
+          <img src="/img/icons/portfolio.png" alt="" /> {{ $t('portfolio') }}
         </div></router-link
       >
       <router-link to="/contact">
         <div class="item" @click="toggleShowMenu">
-          <img src="/img/icons/contact.png" alt="" /> Contacto
+          <img src="/img/icons/contact.png" alt="" /> {{ $t('contact') }}
         </div></router-link
       >
       <hr />
@@ -39,8 +39,6 @@ import { defineProps } from 'vue'
 import { RouterLink } from 'vue-router'
 
 const props = defineProps({ toggleShowMenu: Function })
-
-console.log(props)
 </script>
 
 <style lang="scss" scoped>
@@ -50,7 +48,7 @@ console.log(props)
   background: #202b4c;
   width: 333px;
   height: 510px;
-  left: 40px;
+  left: 60px;
   border-radius: 0 0 10px 10px;
   .menu-head {
     width: 100%;
@@ -110,5 +108,22 @@ console.log(props)
 }
 * {
   text-decoration: none;
+}
+
+@media screen and (max-width: 950px) {
+  .menu-cont {
+    left: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .menu-cont {
+    display: flex;
+    position: absolute;
+    background: #202b4c;
+    width: 253px;
+    height: 510px;
+    left: 20px;
+  }
 }
 </style>

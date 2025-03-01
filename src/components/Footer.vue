@@ -3,19 +3,19 @@
     <div class="items">
       <RouterLink to="/" class="item" draggable="false">
         <img class="icon" src="/img/icons/perfil.png" draggable="false" />
-        <v-tooltip activator="parent" location="top"> Perfil </v-tooltip>
+        <v-tooltip activator="parent" location="top"> {{ $t('profile') }} </v-tooltip>
       </RouterLink>
       <RouterLink to="/resume" class="item" draggable="false">
         <img class="icon" src="/img/icons/resume.png" draggable="false" />
-        <v-tooltip activator="parent" location="top"> Resumen </v-tooltip>
+        <v-tooltip activator="parent" location="top"> {{ $t('resume') }} </v-tooltip>
       </RouterLink>
       <RouterLink to="/portfolio" class="item" draggable="false">
         <img class="icon" src="/img/icons/portfolio.png" draggable="false" />
-        <v-tooltip activator="parent" location="top"> Portafolio </v-tooltip>
+        <v-tooltip activator="parent" location="top"> {{ $t('portfolio') }} </v-tooltip>
       </RouterLink>
       <RouterLink to="/contact" class="item" draggable="false">
         <img class="icon" src="/img/icons/contact.png" draggable="false" />
-        <v-tooltip activator="parent" location="top"> Contacto </v-tooltip>
+        <v-tooltip activator="parent" location="top"> {{ $t('contact') }} </v-tooltip>
       </RouterLink>
       <div class="item">
         <img class="icon" src="/img/icons/gitlab.png" alt="" draggable="false" />
@@ -80,6 +80,64 @@ import { RouterLink } from 'vue-router'
       &:hover {
         transform: translateY(-30px) scale(1.35);
         cursor: pointer;
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer {
+    height: 70px;
+    .items {
+      transform: translateY(-10px);
+      margin-left: 10px;
+      margin-right: 10px;
+
+      .item {
+        width: 47px;
+        height: 47px;
+        .icon {
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer {
+    height: 40px;
+    .items {
+      transform: translateY(-0px);
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 30px;
+      .item {
+        width: 42px;
+        height: 39px;
+        .icon {
+          width: 33px;
+          height: 33px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 330px) {
+  .footer {
+    height: 40px;
+    .items {
+      transform: translateY(-0px);
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 30px;
+      .item {
+        width: 35px;
+        height: 20px;
+        .icon {
+          width: 35px;
+          height: 35px;
+        }
       }
     }
   }

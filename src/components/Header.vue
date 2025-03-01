@@ -16,17 +16,18 @@
         :src="route.fullPath === '/' ? '/img/icons/perfil.png' : `/img/icons${route.fullPath}.png`"
         alt=""
       />
-      <p class="menu-indicator">
-        {{
-          route.fullPath === '/'
-            ? 'Perfil'
-            : route.fullPath.split('/')[1][0].toUpperCase() + route.fullPath.slice(2)
-        }}
-      </p>
+      <div class="menu-indicator" v-if="route?.fullPath === '/'">{{ $t('profile') }}</div>
+      <div class="menu-indicator" v-else-if="route?.fullPath === '/resume'">{{ $t('resume') }}</div>
+      <div class="menu-indicator" v-else-if="route?.fullPath === '/portfolio'">
+        {{ $t('portfolio') }}
+      </div>
+      <div class="menu-indicator" v-else-if="route?.fullPath === '/contact'">
+        {{ $t('contact') }}
+      </div>
     </div>
     <div class="menu-toolbar-cont">
-      <div class="languages-cont">
-        <p class="lang">Es_ve</p>
+      <div @click="toggleShowLang" class="languages-cont">
+        <p class="lang">{{ locale }}</p>
       </div>
       <div class="battery-cont">
         <img src="/img/icons/battery.png" draggable="false" />
@@ -38,16 +39,21 @@
     </div>
   </header>
   <Menu :toggleShowMenu="toggleShowMenu" v-if="showMenu" @mouseleave="toggleShowMenu" />
+  <Languages v-if="showLanguages" @mouseleave="toggleShowLang" />
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import Menu from './Menu.vue'
+import Languages from './Languages.vue'
 
 const route = useRoute()
 const fechaHora = ref(new Date())
 const showMenu = ref(false)
+const showLanguages = ref(false)
+const { locale } = useI18n()
 
 const actualizarHora = () => {
   fechaHora.value = new Date()
@@ -81,6 +87,8 @@ const formatearHora = (fecha) => {
 }
 
 const toggleShowMenu = () => (showMenu.value ? (showMenu.value = false) : (showMenu.value = true))
+const toggleShowLang = () =>
+  showLanguages.value ? (showLanguages.value = false) : (showLanguages.value = true)
 </script>
 
 <style lang="scss" scoped>
@@ -93,6 +101,22 @@ const toggleShowMenu = () => (showMenu.value ? (showMenu.value = false) : (showM
   margin-left: auto;
   height: 70px;
   border-radius: 10px;
+  .languages-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90px;
+    height: 100%;
+    cursor: pointer;
+
+    .lang {
+      color: rgba(250, 250, 250, 00.59);
+      font-size: 18px;
+      font-weight: 600;
+      height: 17px;
+    }
+  }
   .menu-icon-cont {
     display: flex;
     justify-content: center;
@@ -176,6 +200,105 @@ const toggleShowMenu = () => (showMenu.value ? (showMenu.value = false) : (showM
         font-weight: 600;
         color: rgba(250, 250, 250, 00.59);
         font-family: 'Source Sans Pro';
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    height: 50px;
+    .menu-icon-cont {
+      width: 15%;
+      height: 100%;
+      background: rgba(20, 50, 90, 00.19);
+      border-radius: 10px 0px 0px 10px;
+      padding: 7px;
+      .menu-icon {
+        width: 35px;
+        cursor: pointer;
+      }
+    }
+    .menu-indicator-cont {
+      padding-left: 15px;
+      width: 35%;
+      .menu-icon {
+        width: 30px;
+      }
+      .menu-indicator {
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+    .menu-toolbar-cont {
+      width: 50%;
+      height: 100%;
+
+      .languages-cont {
+        width: 20%;
+        height: 100%;
+
+        .lang {
+          font-size: 18px;
+          height: 17px;
+        }
+      }
+
+      .battery-cont {
+        width: 30%;
+        height: 100%;
+
+        img {
+          width: 23px;
+        }
+      }
+
+      .date-cont {
+        width: 30%;
+        margin-right: 15px;
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .header {
+    .menu-toolbar-cont {
+      .date-cont {
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .header {
+    .menu-toolbar-cont {
+      .date-cont {
+        p {
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 330px) {
+  .header {
+    .menu-indicator-cont {
+      padding-left: 7px;
+      .menu-icon {
+        width: 30px;
+      }
+      .menu-indicator {
+        font-size: 12px;
+        margin-left: 07px;
       }
     }
   }
