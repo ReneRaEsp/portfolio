@@ -2,10 +2,10 @@
   <div class="contact">
     <div class="contact-glass">
       <div class="left">
-        <div class="header">Contacto</div>
+        <div class="header">{{ $t('contact') }}</div>
         <div class="body">
           <Card :title="'Email'" text="rdejramirez@gmail.com" link="mailto:rdejramirez@gmail.com" />
-          <Card :title="'Telefono'" text="+51 912569594" link="https://wa.pe/reneraespt" />
+          <Card :title="$t('phone')" text="+51 912569594" link="https://wa.pe/reneraespt" />
           <Card :title="$t('location')" text="Lima, Perú" />
           <Card
             :title="'Telegram'"
@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="right">
-        <div class="header">Redes</div>
+        <div class="header">{{ $t('networking') }}</div>
         <div class="body">
           <MaxiCard
             title="Linkedin"

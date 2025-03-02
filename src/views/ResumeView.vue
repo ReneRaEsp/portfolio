@@ -2,14 +2,56 @@
   <div class="resume">
     <div class="resume-glass">
       <div class="left">
-        <div class="header">Experiencia</div>
+        <div class="header">{{ $t('experience') }}</div>
         <div class="body">
-          <Card />
+          <Card
+            :title="$t('exp-2-title')"
+            :place="$t('exp-2-place')"
+            :dates="$t('exp-2-date')"
+            :text="$t('exp-2-text')"
+            :isExp="true"
+          />
+          <Card
+            :title="$t('exp-1-title')"
+            :place="$t('exp-1-place')"
+            :dates="$t('exp-1-date')"
+            :text="$t('exp-1-text')"
+            :isExp="true"
+          />
         </div>
       </div>
       <div class="right">
-        <div class="header">Educación</div>
-        <div class="body"></div>
+        <div class="header">{{ $t('education') }}</div>
+        <div class="body">
+          <Card
+            :title="$t('edu-1-title')"
+            :place="$t('edu-1-place')"
+            :dates="$t('edu-1-date')"
+            :text="$t('edu-1-text')"
+            :isExp="false"
+          />
+          <Card
+            :title="$t('edu-2-title')"
+            :place="$t('edu-2-place')"
+            :dates="$t('edu-2-date')"
+            :text="$t('edu-2-text')"
+            :isExp="false"
+          />
+          <Card
+            :title="$t('edu-3-title')"
+            :place="$t('edu-3-place')"
+            :dates="$t('edu-3-date')"
+            :text="$t('edu-3-text')"
+            :isExp="false"
+          />
+          <Card
+            :title="$t('edu-4-title')"
+            :place="$t('edu-4-place')"
+            :dates="$t('edu-4-date')"
+            :text="$t('edu-4-text')"
+            :isExp="false"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -17,6 +59,9 @@
 
 <script setup>
 import Card from './../components/resume/Card.vue'
+
+const lorem =
+  'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremquelaudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectobeatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatemaccusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis etquasi architecto beatae vitae dicta sunt explicabo.'
 </script>
 
 <style lang="scss" scoped>
@@ -63,8 +108,8 @@ import Card from './../components/resume/Card.vue'
 }
 
 @media screen and (max-width: 770px) {
-  .contact {
-    .contact-glass {
+  .resume {
+    .resume-glass {
       .left {
         width: 100%;
         height: auto;

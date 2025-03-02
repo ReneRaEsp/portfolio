@@ -1,25 +1,31 @@
 <template>
   <div class="card">
     <div class="title">
-      <a class="link-title" :href="link" target="_blank"> {{ title }} </a>
-      <div class="copy-cont">
-        <Copy :textToCopy="text" />
+      <div :class="{ 'first-exp': isExp, 'first-edu': !isExp }">
+        {{ title }}
+      </div>
+      <div class="place">
+        {{ place }}
+      </div>
+      <div class="dates">
+        {{ dates }}
       </div>
     </div>
     <div class="text">
-      <a class="link" :href="link" target="_blank"> {{ text }} </a>
+      {{ text }}
     </div>
   </div>
 </template>
 
 <script setup>
 import { defineProps } from 'vue'
-import Copy from './../Copy.vue'
 
 const props = defineProps({
   title: String,
+  place: String,
+  dates: String,
   text: String,
-  link: String,
+  isExp: Boolean,
 })
 </script>
 
@@ -36,8 +42,7 @@ const props = defineProps({
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 40px;
-    color: #30a567;
+    min-height: 40px;
     font-weight: 600;
     padding-left: 20px;
     padding-right: 20px;
@@ -45,23 +50,36 @@ const props = defineProps({
     margin: 0px;
     background: rgba(30, 30, 30, 0.5);
     border-radius: 15px 15px 0px 0px;
+    .first-exp {
+      width: 60%;
+      font-size: 14px;
+      color: rgba(250, 250, 250, 0.65);
+    }
+    .first-edu {
+      width: 60%;
+      font-size: 14px;
+      color: #30a567;
+    }
+    .place {
+      width: 25%;
+      font-size: 10px;
+      color: #90ffd2;
+    }
+    .dates {
+      width: 15%;
+      font-size: 9px;
+      color: #61a08b;
+    }
   }
   .text {
     height: 100%;
-    color: white;
-    padding: 20px 20px 20px 60px;
+    color: rgba(230, 230, 230, 0.75);
+    padding: 20px 20px 20px 20px;
     background: rgba(10, 10, 10, 0.4);
     margin: 2px;
     border-radius: 0 0 15px 15px;
     word-break: break-all;
-  }
-  .link {
-    text-decoration: none;
-    color: rgba(230, 230, 230, 0.8);
-  }
-  .link-title {
-    text-decoration: none;
-    color: #30a567;
+    font-size: 12px;
   }
 }
 
