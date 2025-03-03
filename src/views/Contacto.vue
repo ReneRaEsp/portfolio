@@ -10,7 +10,7 @@
           <Card
             :title="'Telegram'"
             :text="'https://t.me/rrteam7'"
-            :image="'/img/icons/telegramqr.png'"
+            :image="'/img/telegramqr.webp'"
             :link="'https://t.me/rrteam7'"
           />
         </div>

@@ -50,6 +50,7 @@ const props = defineProps({ toggleShowMenu: Function })
   height: 510px;
   left: 60px;
   border-radius: 0 0 10px 10px;
+  z-index: 2;
   .menu-head {
     width: 100%;
     height: 60px;

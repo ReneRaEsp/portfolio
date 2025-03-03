@@ -24,7 +24,7 @@ const changeLocale = (newLocale) => {
   background: #202b4c;
   width: 110px;
   height: 110px;
-  right: 245px;
+  right: 230px;
   border-radius: 0 0 10px 10px;
   .lang {
     display: flex;

@@ -192,6 +192,7 @@ const toggleShowLang = () =>
       width: 120px;
       height: 100%;
       margin-right: 40px;
+      cursor: default;
 
       p {
         text-align: center;
