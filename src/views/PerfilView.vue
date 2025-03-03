@@ -169,14 +169,49 @@
           </div>
         </div>
       </div>
-      <div class="footer"></div>
+      <div class="footer">
+        <Card
+          title="Diseño y Desarrollo de Sitios Web"
+          :text="'Diseño y desarrollo sitios web modernos y personalizados, adaptados a tus necesidades y objetivos. Me aseguro de que cada proyecto sea atractivo, funcional y optimizado para brindar una experiencia de usuario excepcional, logrando así un rendimiento eficiente y profesional.'"
+          :image="'/img/web.webp'"
+        />
+        <Card
+          title="Desarrollo de Aplicaciones Web"
+          :text="'Creo aplicaciones web dinámicas y escalables, utilizando tecnologías de vanguardia para garantizar rapidez, seguridad y facilidad de uso. Cada aplicación está pensada para adaptarse a las necesidades específicas de tu negocio, asegurando una gestión eficiente y una gran experiencia para los usuarios.'"
+          :image="'/img/app-development.webp'"
+        />
+        <Card
+          title="Optimización SEO"
+          :text="'Consiste en mejorar el posicionamiento de tu sitio web en los motores de búsqueda, aplicando estrategias SEO avanzadas. Desde la optimización de contenido hasta la mejora de la velocidad de carga y la estructura del sitio, te ayudo a atraer más visitantes y convertirlos en clientes potenciales.'"
+          :image="'/img/seo.webp'"
+        />
+        <Card
+          title="Web Scraping"
+          :text="'Extraigo, analizo y estructuro datos valiosos de la web de manera eficiente y automatizada. Si necesitas obtener información clave para estudios de mercado, análisis de competencia o cualquier otro propósito, puedo desarrollar herramientas personalizadas para simplificar el proceso y brindarte datos precisos.'"
+          :image="'/img/scraping.webp'"
+        />
+        <Card
+          title="Desarrollo de Web API"
+          :text="'Diseño y programo APIs seguras y eficientes que permiten la integración fluida entre diferentes plataformas y aplicaciones. Ya sea para conectar servicios, gestionar bases de datos o facilitar la comunicación entre sistemas, me aseguro de que la API sea escalable, segura y bien documentada.'"
+          :image="'/img/api.webp'"
+        />
+        <Card
+          title="Desarrollo de Aplicaciones Móviles"
+          :text="'Desarrollo aplicaciones móviles innovadoras y personalizadas para iOS y Android, garantizando un diseño intuitivo, una navegación fluida y un rendimiento óptimo. Me enfoco en crear apps que brinden la mejor experiencia al usuario, combinando funcionalidad y estética de manera equilibrada.'"
+          :image="'/img/development.webp'"
+        />
+        <Card
+          title="Detección y Solución de Errores"
+          :text="'Analizo, identifico y soluciono errores en sitios web y aplicaciones para garantizar su correcto funcionamiento. Ya sea un problema de rendimiento, seguridad o compatibilidad, me encargo de encontrar la causa raíz y aplicar las soluciones necesarias para que todo funcione sin interrupciones.'"
+          :image="'/img/debugging.webp'"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import Card from './../components/contact/Card.vue'
-import MaxiCard from './../components/contact/MaxiCard.vue'
+import Card from './../components/profile/Card.vue'
 </script>
 
 <style lang="scss" scoped>
@@ -376,9 +411,14 @@ import MaxiCard from './../components/contact/MaxiCard.vue'
       }
     }
     .footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      overflow-y: auto;
       width: 100%;
       height: 40%;
-      background: rgba(102, 142, 12, 0.13);
+      border: 1px solid rgba(252, 252, 252, 0.73);
+      border-radius: 0px 0px 40px 40px;
     }
   }
 }
