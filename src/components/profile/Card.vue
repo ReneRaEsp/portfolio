@@ -8,7 +8,7 @@
         {{ title }}
       </div>
     </div>
-    <div class="body">
+    <div class="body-card">
       {{ text }}
     </div>
   </div>
@@ -65,7 +65,7 @@ const props = defineProps({
       font-size: 18px;
     }
   }
-  .body {
+  .body-card {
     width: 100%;
     height: 100%;
     color: rgba(230, 230, 230, 0.75);
@@ -79,9 +79,33 @@ const props = defineProps({
 
 @media screen and (max-width: 500px) {
   .card {
-    .copy-cont-mobile {
-      display: flex;
+    width: 300px;
+    height: 90%;
+    margin: 0 10px;
+    .header {
+      min-height: 50px;
+      padding: 7px 20px;
+      margin: 0px;
+      background: rgba(130, 170, 190, 0.12);
+      border-radius: 15px 15px 0px 0px;
+      .img-cont {
+        display: flex;
+        flex-direction: flex-start;
+        align-items: center;
+        width: auto;
+        img {
+          height: 30px;
+        }
+      }
+      .title-cont {
+        font-size: 11px;
+      }
     }
+  }
+  .body-card {
+    font-size: 9px !important;
+    padding: 6px !important;
+    text-align: justify;
   }
 }
 </style>

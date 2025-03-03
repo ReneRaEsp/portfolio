@@ -6,7 +6,7 @@
         <div class="left">
           <div class="img-cont">
             <img draggable="false" src="/img/perfil.webp" alt="" />
-            <p>Mis Servicios</p>
+            <p class="mis-servicios">Mis Servicios</p>
           </div>
           <div class="resumen-cont">
             <div class="text-cont">
@@ -382,7 +382,7 @@ import Card from './../components/profile/Card.vue'
             .top-right {
               display: flex;
               width: 65%;
-              height: 100%;
+              t: 100%;
               padding: 20px;
               p {
                 color: rgba(252, 252, 252, 0.73);
@@ -403,6 +403,7 @@ import Card from './../components/profile/Card.vue'
             width: 100%;
             height: 50%;
             border: 1px solid rgba(222, 222, 222, 0.7);
+            padding: 0px 0px 0 15px;
             &:hover {
               background: rgba(212, 242, 222, 0.13);
             }
@@ -441,6 +442,113 @@ import Card from './../components/profile/Card.vue'
         }
       }
     }
+  }
+  .mis-servicios {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .tech {
+    width: 40px;
+    height: 70px;
+    img {
+      width: 30px;
+    }
+  }
+  .contact {
+    .contact-glass {
+      .body {
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        .left {
+          width: 100%;
+          height: auto;
+          min-height: 300px;
+          .resumen-cont {
+            .text-cont {
+              p {
+                padding: 10px;
+              }
+            }
+          }
+        }
+        .right {
+          width: 100%;
+          height: auto;
+          flex-wrap: wrap;
+
+          .skills-cont {
+            width: 100%;
+            height: auto;
+          }
+          .languages-cont {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      .footer {
+        padding-top: 0;
+      }
+    }
+  }
+  .mis-servicios {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact {
+    .contact-glass {
+      .body {
+        .left {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0;
+          height: auto;
+          p {
+            text-align: justify;
+            font-size: 12px;
+            padding: 0;
+          }
+          .img-cont {
+            width: 100%;
+            height: auto;
+            padding-top: 10px;
+            img {
+              width: 60%;
+              opacity: 0.7;
+              border-radius: 10px;
+            }
+          }
+          .resumen-cont {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .right {
+          width: 100%;
+          height: auto;
+          flex-wrap: wrap;
+
+          .skills-cont {
+            width: 100%;
+            height: auto;
+          }
+          .languages-cont {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      .footer {
+        padding-top: 0;
+      }
+    }
+  }
+  .mis-servicios {
+    display: none;
   }
 }
 </style>
