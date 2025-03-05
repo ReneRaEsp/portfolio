@@ -17,22 +17,22 @@
         <img class="icon" src="/img/icons/contact.png" draggable="false" />
         <v-tooltip activator="parent" location="top"> {{ $t('contact') }} </v-tooltip>
       </RouterLink>
-      <div class="item">
+      <a href="https://gitlab.com/reneraespteam" target="_blank" class="item">
         <img class="icon" src="/img/icons/gitlab.png" alt="" draggable="false" />
         <v-tooltip activator="parent" location="top"> Gitlab </v-tooltip>
-      </div>
-      <div class="item">
+      </a>
+      <a href="https://www.linkedin.com/in/rene-ramirez-6674b31a5/" target="_blank" class="item">
         <img class="icon" src="/img/icons/linkedin.png" alt="" draggable="false" />
         <v-tooltip activator="parent" location="top"> Linkedin </v-tooltip>
-      </div>
-      <div class="item">
+      </a>
+      <a href="https://cert.efset.org/CgECYy" target="_blank" class="item">
         <img class="icon" src="/img/icons/efset.jpeg" alt="" draggable="false" />
         <v-tooltip activator="parent" location="top"> EF Set </v-tooltip>
-      </div>
-      <div class="item">
+      </a>
+      <a href="https://www.codewars.com/users/ReneRaEsp" target="_blank" class="item">
         <img class="icon codewars" src="/img/icons/codewars.png" alt="" draggable="false" />
         <v-tooltip activator="parent" location="top"> Codewars </v-tooltip>
-      </div>
+      </a>
     </div>
   </footer>
 </template>

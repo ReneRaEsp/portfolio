@@ -62,12 +62,12 @@ const props = defineProps({
     }
     .place {
       width: 25%;
-      font-size: 10px;
+      font-size: 12px;
       color: #90ffd2;
     }
     .dates {
       width: 15%;
-      font-size: 9px;
+      font-size: 14px;
       color: #61a08b;
     }
   }

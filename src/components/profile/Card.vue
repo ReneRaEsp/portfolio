@@ -11,6 +11,14 @@
     <div class="body-card">
       {{ text }}
     </div>
+    <div class="footer-card">
+      <a :href="links[0]" class="whatsapp-btn">
+        Solicitar servicio por WhatsApp <img src="/img/icons/whatsapp.webp" alt="" />
+      </a>
+      <a :href="links[1]" class="email-btn">
+        Solicitar servicio por correo <img src="/img/icons/contact.webp" alt="" />
+      </a>
+    </div>
   </div>
 </template>
 
@@ -21,7 +29,10 @@ const props = defineProps({
   title: String,
   text: String,
   image: String,
+  links: String,
 })
+
+console.log(props.links)
 </script>
 
 <style scoped lang="scss">
@@ -38,7 +49,7 @@ const props = defineProps({
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    width: 101%;
+    width: 100%;
     min-height: 70px;
     font-weight: 600;
     padding-left: 20px;
@@ -71,9 +82,32 @@ const props = defineProps({
     color: rgba(230, 230, 230, 0.75);
     padding: 20px 20px 20px 20px;
     background: rgba(130, 170, 190, 0.12);
-    margin: 2px;
+    margin: 2px 0 0 0;
+    border-radius: 0 0 0px 0px;
+    font-size: 14px;
+  }
+  .footer-card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: rgba(230, 230, 230, 0.75);
+    padding: 0px 20px 10px 20px;
+    background: rgba(130, 170, 190, 0.12);
     border-radius: 0 0 15px 15px;
     font-size: 14px;
+    .btn {
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background: rgba(30, 120, 120, 0.75);
+      color: rgba(230, 230, 230, 0.85);
+      text-decoration: none;
+      cursor: pointer;
+    }
+    img {
+      width: 30px;
+    }
   }
 }
 

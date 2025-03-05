@@ -11,9 +11,9 @@
           <div class="resumen-cont">
             <div class="text-cont">
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In placeat, laborum
-                nesciunt hic vitae ducimus accusamus. Itaque tenetur, quam, quasi dicta quia labore,
-                placeat ducimus autem perferendis dolorem consectetur quas!
+                Desarrollador Web Full Stack con experiencia en frontend y backend, especializado en
+                tecnologías como Vue.js, Laravel, Symfony y Node.js. Amplio conocimiento en diseño
+                web, desarrollo de API RESTful y creación de aplicaciones móviles con Ionic.
               </p>
             </div>
           </div>
@@ -22,19 +22,19 @@
           <div class="skills-cont">
             <div class="chip"><p>Skills principales</p></div>
             <div class="tech">
-              <img src="/img/icons/tech/html.png" alt="" />
+              <img src="/img/icons/tech/html.webp" alt="" />
               <v-tooltip activator="parent" location="top"> HTML </v-tooltip>
             </div>
             <div class="tech">
-              <img src="/img/icons/tech/css.png" alt="" />
+              <img src="/img/icons/tech/css.webp" alt="" />
               <v-tooltip activator="parent" location="top"> CSS </v-tooltip>
             </div>
             <div class="tech">
-              <img src="/img/icons/tech/javascript.png" alt="" />
+              <img src="/img/icons/tech/javascript.webp" alt="" />
               <v-tooltip activator="parent" location="top"> Javascript </v-tooltip>
             </div>
             <div class="tech">
-              <img src="/img/icons/tech/php.png" alt="" />
+              <img src="/img/icons/tech/php.webp" alt="" />
               <v-tooltip activator="parent" location="top"> PHP </v-tooltip>
             </div>
             <div class="tech">
@@ -42,49 +42,45 @@
               <v-tooltip activator="parent" location="top"> Wordpress </v-tooltip>
             </div>
             <div class="tech">
-              <img src="/img/icons/tech/elementor.png" alt="" />
+              <img src="/img/icons/tech/elementor.webp" alt="" />
               <v-tooltip activator="parent" location="top"> Elementor </v-tooltip>
             </div>
             <div class="tech">
-              <img src="/img/icons/tech/woocommerce.png" alt="" />
+              <img src="/img/icons/tech/woocommerce.webp" alt="" />
               <v-tooltip activator="parent" location="top"> Woocommerce </v-tooltip>
             </div>
 
             <div class="tech">
-              <img src="/img/icons/tech/node.svg" alt="" />
+              <img src="/img/icons/tech/node.webp" alt="" />
               <v-tooltip activator="parent" location="top"> Node </v-tooltip>
             </div>
             <div class="tech">
-              <img
-                style="background: white; border-radius: 20px"
-                src="/img/icons/tech/express.png"
-                alt=""
-              />
+              <img src="/img/icons/tech/express.webp" alt="" />
               <v-tooltip activator="parent" location="top"> Express </v-tooltip>
             </div>
             <div class="tech">
-              <img src="/img/icons/tech/laravel.png" alt="" />
+              <img src="/img/icons/tech/laravel.webp" alt="" />
               <v-tooltip activator="parent" location="top"> Laravel </v-tooltip>
             </div>
             <div class="tech">
-              <img src="/img/icons/tech/vue.png" alt="" />
+              <img src="/img/icons/tech/vue.webp" alt="" />
               <v-tooltip activator="parent" location="top"> Vue </v-tooltip>
             </div>
             <div class="tech">
-              <img src="/img/icons/tech/nuxt.png" alt="" />
+              <img src="/img/icons/tech/nuxt.webp" alt="" />
               <v-tooltip activator="parent" location="top"> Nuxt </v-tooltip>
             </div>
             <div class="tech">
               <v-tooltip activator="parent" location="top"> Symfony </v-tooltip>
-              <img src="/img/icons/tech/symfony.png" alt="" />
+              <img src="/img/icons/tech/symfony.webp" alt="" />
             </div>
             <div class="tech">
-              <img src="/img/icons/tech/linux.png" alt="" />
+              <img src="/img/icons/tech/linux.webp" alt="" />
               <v-tooltip activator="parent" location="top"> Linux </v-tooltip>
             </div>
             <div class="tech">
-              <img src="/img/icons/tech/terminal.png" alt="" />
-              <v-tooltip activator="parent" location="top"> Shell </v-tooltip>
+              <img src="/img/icons/tech/bash.webp" alt="" />
+              <v-tooltip activator="parent" location="top"> Bash </v-tooltip>
             </div>
             <div class="tech">
               <v-tooltip activator="parent" location="top"> Cloud Computing </v-tooltip>
@@ -92,16 +88,28 @@
               <img src="/img/icons/tech/cloud.svg" alt="" />
             </div>
             <div class="tech">
-              <img src="/img/icons/tech/elephant.png" alt="" />
+              <img src="/img/icons/tech/postgresql.webp" alt="" />
               <v-tooltip activator="parent" location="top"> PostgreSQL </v-tooltip>
             </div>
             <div class="tech">
-              <img src="/img/icons/tech/mysql.png" alt="" />
+              <img src="/img/icons/tech/mysql.webp" alt="" />
               <v-tooltip activator="parent" location="top"> MySQL </v-tooltip>
             </div>
             <div class="tech">
-              <img src="/img/icons/tech/mongodb.png" alt="" />
+              <img src="/img/icons/tech/mongo.webp" alt="" />
               <v-tooltip activator="parent" location="top"> MongoDB </v-tooltip>
+            </div>
+            <div class="tech">
+              <img src="/img/icons/tech/figma.webp" alt="" />
+              <v-tooltip activator="parent" location="top"> Figma </v-tooltip>
+            </div>
+            <div class="tech">
+              <img src="/img/icons/tech/ionic.webp" alt="" />
+              <v-tooltip activator="parent" location="top"> Ionic </v-tooltip>
+            </div>
+            <div class="tech">
+              <img src="/img/icons/tech/capacitor.webp" alt="" />
+              <v-tooltip activator="parent" location="top"> Capacitor </v-tooltip>
             </div>
           </div>
           <div class="languages-cont">
@@ -138,31 +146,31 @@
                 <p>Skills secundarias</p>
               </div>
               <div class="tech">
-                <img src="/img/icons/tech/typescript.png" alt="" />
+                <img src="/img/icons/tech/typescript.webp" alt="" />
                 <v-tooltip activator="parent" location="top"> Typescript </v-tooltip>
               </div>
               <div class="tech">
-                <img src="/img/icons/tech/angular.svg" alt="" />
+                <img src="/img/icons/tech/angular.webp" alt="" />
                 <v-tooltip activator="parent" location="top"> Angular </v-tooltip>
               </div>
               <div class="tech">
-                <img src="/img/icons/tech/jquery.svg" alt="" />
+                <img src="/img/icons/tech/jquery.webp" alt="" />
                 <v-tooltip activator="parent" location="top"> JQuery </v-tooltip>
               </div>
               <div class="tech">
-                <img src="/img/icons/tech/react.png" alt="" />
+                <img src="/img/icons/tech/react.webp" alt="" />
                 <v-tooltip activator="parent" location="top"> React </v-tooltip>
               </div>
               <div class="tech">
-                <img src="/img/icons/tech/nextjs.svg" alt="" />
+                <img src="/img/icons/tech/next.webp" alt="" />
                 <v-tooltip activator="parent" location="top"> NextJS </v-tooltip>
               </div>
               <div class="tech">
-                <img src="/img/icons/tech/python.svg" alt="" />
+                <img src="/img/icons/tech/python.webp" alt="" />
                 <v-tooltip activator="parent" location="top"> Python </v-tooltip>
               </div>
               <div class="tech">
-                <img src="/img/icons/tech/docker.png" alt="" />
+                <img src="/img/icons/tech/docker.webp" alt="" />
                 <v-tooltip activator="parent" location="top"> Docker </v-tooltip>
               </div>
             </div>
@@ -171,39 +179,12 @@
       </div>
       <div class="footer">
         <Card
-          title="Diseño y Desarrollo de Sitios Web"
-          :text="'Diseño y desarrollo sitios web modernos y personalizados, adaptados a tus necesidades y objetivos. Me aseguro de que cada proyecto sea atractivo, funcional y optimizado para brindar una experiencia de usuario excepcional, logrando así un rendimiento eficiente y profesional.'"
-          :image="'/img/web.webp'"
-        />
-        <Card
-          title="Desarrollo de Aplicaciones Web"
-          :text="'Creo aplicaciones web dinámicas y escalables, utilizando tecnologías de vanguardia para garantizar rapidez, seguridad y facilidad de uso. Cada aplicación está pensada para adaptarse a las necesidades específicas de tu negocio, asegurando una gestión eficiente y una gran experiencia para los usuarios.'"
-          :image="'/img/app-development.webp'"
-        />
-        <Card
-          title="Optimización SEO"
-          :text="'Consiste en mejorar el posicionamiento de tu sitio web en los motores de búsqueda, aplicando estrategias SEO avanzadas. Desde la optimización de contenido hasta la mejora de la velocidad de carga y la estructura del sitio, te ayudo a atraer más visitantes y convertirlos en clientes potenciales.'"
-          :image="'/img/seo.webp'"
-        />
-        <Card
-          title="Web Scraping"
-          :text="'Extraigo, analizo y estructuro datos valiosos de la web de manera eficiente y automatizada. Si necesitas obtener información clave para estudios de mercado, análisis de competencia o cualquier otro propósito, puedo desarrollar herramientas personalizadas para simplificar el proceso y brindarte datos precisos.'"
-          :image="'/img/scraping.webp'"
-        />
-        <Card
-          title="Desarrollo de Web API"
-          :text="'Diseño y programo APIs seguras y eficientes que permiten la integración fluida entre diferentes plataformas y aplicaciones. Ya sea para conectar servicios, gestionar bases de datos o facilitar la comunicación entre sistemas, me aseguro de que la API sea escalable, segura y bien documentada.'"
-          :image="'/img/api.webp'"
-        />
-        <Card
-          title="Desarrollo de Aplicaciones Móviles"
-          :text="'Desarrollo aplicaciones móviles innovadoras y personalizadas para iOS y Android, garantizando un diseño intuitivo, una navegación fluida y un rendimiento óptimo. Me enfoco en crear apps que brinden la mejor experiencia al usuario, combinando funcionalidad y estética de manera equilibrada.'"
-          :image="'/img/development.webp'"
-        />
-        <Card
-          title="Detección y Solución de Errores"
-          :text="'Analizo, identifico y soluciono errores en sitios web y aplicaciones para garantizar su correcto funcionamiento. Ya sea un problema de rendimiento, seguridad o compatibilidad, me encargo de encontrar la causa raíz y aplicar las soluciones necesarias para que todo funcione sin interrupciones.'"
-          :image="'/img/debugging.webp'"
+          v-for="(card, index) of cardsData"
+          :key="index"
+          :title="card.title"
+          :text="card.text"
+          :image="card.image"
+          :links="card.links"
         />
       </div>
     </div>
@@ -212,6 +193,10 @@
 
 <script setup>
 import Card from './../components/profile/Card.vue'
+
+import usePerfil from './../composables/usePerfil.js'
+
+const { cardsData } = usePerfil()
 </script>
 
 <style lang="scss" scoped>
@@ -333,7 +318,10 @@ import Card from './../components/profile/Card.vue'
           padding-top: 10px;
           border: 1px solid rgba(222, 222, 222, 0.7);
           &:hover {
-            background: rgba(212, 242, 222, 0.13);
+            background: rgba(2, 60, 60, 0.12);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 0 15px 0.25px rgba(255, 255, 255, 0.7);
           }
         }
         .languages-cont {
@@ -341,11 +329,18 @@ import Card from './../components/profile/Card.vue'
           flex-wrap: wrap;
           width: 50%;
           height: 100%;
+
           .top {
             display: flex;
             width: 100%;
             height: 50%;
             border: 1px solid rgba(222, 222, 222, 0.7);
+            &:hover {
+              background: rgba(2, 60, 60, 0.12);
+              backdrop-filter: blur(10px);
+              -webkit-backdrop-filter: blur(10px);
+              box-shadow: 0 0 15px 0.25px rgba(255, 255, 255, 0.7);
+            }
             .top-left {
               display: flex;
               justify-content: space-between;
@@ -389,9 +384,6 @@ import Card from './../components/profile/Card.vue'
                 font-size: 15px;
               }
             }
-            &:hover {
-              background: rgba(212, 242, 222, 0.13);
-            }
           }
           .bottom {
             display: flex;
@@ -405,7 +397,10 @@ import Card from './../components/profile/Card.vue'
             border: 1px solid rgba(222, 222, 222, 0.7);
             padding: 0px 0px 0 15px;
             &:hover {
-              background: rgba(212, 242, 222, 0.13);
+              background: rgba(2, 60, 60, 0.12);
+              backdrop-filter: blur(10px);
+              -webkit-backdrop-filter: blur(10px);
+              box-shadow: 0 0 15px 0.25px rgba(255, 255, 255, 0.7);
             }
           }
         }
@@ -420,6 +415,12 @@ import Card from './../components/profile/Card.vue'
       height: 40%;
       border: 1px solid rgba(252, 252, 252, 0.73);
       border-radius: 0px 0px 40px 40px;
+      &:hover {
+        background: rgba(2, 60, 60, 0.12);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: 0 0 15px 0.25px rgba(255, 255, 255, 0.7);
+      }
     }
   }
 }

@@ -13,6 +13,12 @@
     <div class="data-cont">
       <h2>{{ title }}</h2>
     </div>
+    <div class="stack-cont">
+      <div v-for="tech of technologies" :key="tech.name" class="tech">
+        <img :src="tech.img" alt="" />
+        <v-tooltip activator="parent" location="top"> {{ tech.name }} </v-tooltip>
+      </div>
+    </div>
   </a>
 </template>
 
@@ -23,11 +29,13 @@ const props = defineProps({
   images: Array,
   title: String,
   link: String,
+  technologies: Array,
 })
 
 const imagesArr = ref(props.images)
 const currentImage = ref(props.images[0])
 const times = ref(0)
+
 let intervalid = null
 
 const onHover = () => {
@@ -55,12 +63,12 @@ const stopHover = () => {
 <style scoped lang="scss">
 .card {
   width: 440px;
-  height: 340px;
-  border: 0px solid blue;
+  min-height: 340px;
   background: rgba(200, 200, 200, 0.13);
   margin: 30px;
   border-radius: 20px;
   text-decoration: none;
+
   .img-cont {
     img {
       width: 100%;
@@ -72,6 +80,42 @@ const stopHover = () => {
     color: rgba(200, 200, 200, 0.93);
     h2 {
       font-size: 16px;
+    }
+  }
+
+  .stack-cont {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 0 20px;
+    border-radius: 0 0 20px 20px;
+    transition:
+      background 0.4s,
+      box-shadow 0.4s,
+      backdrop-filter 0.4s;
+    &:hover {
+      background: rgba(200, 200, 200, 0.091);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px 0.25px rgba(255, 255, 255, 0.7);
+    }
+    .tech {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: 50px;
+      height: 70px;
+      cursor: pointer;
+      img {
+        width: 40px;
+        transition: 0.8s;
+        &:hover {
+          transform: scale(2);
+        }
+      }
     }
   }
 }
