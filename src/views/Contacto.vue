@@ -16,13 +16,13 @@
         </div>
       </div>
       <div class="right">
-        <div class="header">{{ $t('networking') }}</div>
+        <div class="header"></div>
         <div class="body">
-          <MaxiCard
+          <!-- <MaxiCard
             title="Linkedin"
             text="https://www.linkedin.com/in/rene-ramirez-6674b31a5/"
             link="https://www.linkedin.com/in/rene-ramirez-6674b31a5/"
-          />
+            />-->
           <MaxiCard
             title="Codewars"
             text="https://www.codewars.com/users/ReneRaEsp"
@@ -52,7 +52,6 @@ import MaxiCard from './../components/contact/MaxiCard.vue'
 <style lang="scss" scoped>
 .header {
   height: 60px;
-  border: 1px solid rgba(202, 242, 262, 0.2);
   padding: 20px;
   font-size: 22px;
   color: rgba(202, 242, 262, 0.73);

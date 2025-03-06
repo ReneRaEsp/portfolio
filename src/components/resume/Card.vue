@@ -74,7 +74,7 @@ const props = defineProps({
   .text {
     height: 100%;
     color: rgba(230, 230, 230, 0.75);
-    padding: 20px 20px 20px 20px;
+    padding: 35px 20px 35px 20px;
     background: rgba(10, 10, 10, 0.4);
     margin: 2px;
     border-radius: 0 0 15px 15px;

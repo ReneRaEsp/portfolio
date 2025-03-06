@@ -36,12 +36,12 @@ const props = defineProps({
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 40px;
+    height: 50px;
     color: #30a567;
     font-weight: 600;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 10px;
+    padding-top: 20px;
     margin: 0px;
     background: rgba(30, 30, 30, 0.5);
     border-radius: 15px 15px 0px 0px;
@@ -49,7 +49,7 @@ const props = defineProps({
   .text {
     height: 100%;
     color: white;
-    padding: 20px 20px 20px 60px;
+    padding: 35px 20px 35px 60px;
     background: rgba(10, 10, 10, 0.4);
     margin: 2px;
     border-radius: 0 0 15px 15px;

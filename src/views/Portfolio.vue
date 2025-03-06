@@ -68,8 +68,6 @@
         { name: 'PHP', img: 'img/icons/tech/php.webp' },
         { name: 'Laravel', img: 'img/icons/tech/laravel.webp' },
         { name: 'JQuery', img: 'img/icons/tech/jquery.webp' },
-        { name: 'Wordpress', img: 'img/icons/tech/wordpress.png' },
-        { name: 'Elementor', img: 'img/icons/tech/elementor.webp' },
       ]"
     />
     <Card

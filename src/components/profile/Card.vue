@@ -12,12 +12,17 @@
       {{ text }}
     </div>
     <div class="footer-card">
-      <a :href="links[0]" class="whatsapp-btn">
-        Solicitar servicio por WhatsApp <img src="/img/icons/whatsapp.webp" alt="" />
-      </a>
-      <a :href="links[1]" class="email-btn">
-        Solicitar servicio por correo <img src="/img/icons/contact.webp" alt="" />
-      </a>
+      <div class="solicitar">
+        <a :href="links[0]" class="whatsapp-btn"> {{ $t('requestService') }} </a>
+      </div>
+      <div class="links">
+        <a draggable="false" :href="links[0]" class="whatsapp-btn">
+          <img draggable="false" src="/img/icons/whatsapp.webp" alt="" />
+        </a>
+        <a draggable="false" :href="links[1]" class="email-btn">
+          <img draggable="false" src="/img/icons/contact.webp" alt="" />
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -31,8 +36,6 @@ const props = defineProps({
   image: String,
   links: String,
 })
-
-console.log(props.links)
 </script>
 
 <style scoped lang="scss">
@@ -40,7 +43,7 @@ console.log(props.links)
   box-sizing: border-box;
   display: flex;
   width: 440px;
-  height: 90%;
+  height: 80%;
   flex-direction: column;
   border-radius: 10px;
   flex-shrink: 0;
@@ -89,6 +92,7 @@ console.log(props.links)
   .footer-card {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
     color: rgba(230, 230, 230, 0.75);
@@ -108,13 +112,27 @@ console.log(props.links)
     img {
       width: 30px;
     }
+    .links {
+      display: flex;
+      justify-content: space-evenly;
+      width: 40%;
+    }
+    .solicitar {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 5px;
+    }
   }
 }
-
+a {
+  text-decoration: none;
+  color: rgba(230, 230, 230, 0.85);
+}
 @media screen and (max-width: 500px) {
   .card {
     width: 300px;
-    height: 90%;
+    height: 60%;
     margin: 0 10px;
     .header {
       min-height: 50px;

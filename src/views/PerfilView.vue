@@ -1,177 +1,75 @@
 <template>
   <div class="contact">
     <div class="contact-glass">
-      <div class="header">Sobre mí</div>
+      <div class="header">{{ $t('aboutMe') }}</div>
       <div class="body">
         <div class="left">
           <div class="img-cont">
-            <img draggable="false" src="/img/perfil.webp" alt="" />
-            <p class="mis-servicios">Mis Servicios</p>
+            <img draggable="false" src="/img/perfil2.webp" alt="" />
+            <p class="mis-servicios">{{ $t('myServices') }}</p>
           </div>
           <div class="resumen-cont">
             <div class="text-cont">
               <p>
-                Desarrollador Web Full Stack con experiencia en frontend y backend, especializado en
-                tecnologías como Vue.js, Laravel, Symfony y Node.js. Amplio conocimiento en diseño
-                web, desarrollo de API RESTful y creación de aplicaciones móviles con Ionic.
+                {{ $t('description') }}
               </p>
             </div>
           </div>
         </div>
         <div class="right">
           <div class="skills-cont">
-            <div class="chip"><p>Skills principales</p></div>
-            <div class="tech">
-              <img src="/img/icons/tech/html.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> HTML </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/css.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> CSS </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/javascript.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> Javascript </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/php.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> PHP </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/wordpress.png" alt="" />
-              <v-tooltip activator="parent" location="top"> Wordpress </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/elementor.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> Elementor </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/woocommerce.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> Woocommerce </v-tooltip>
+            <div class="chip">
+              <p>{{ $t('principalSkills') }}</p>
             </div>
 
-            <div class="tech">
-              <img src="/img/icons/tech/node.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> Node </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/express.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> Express </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/laravel.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> Laravel </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/vue.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> Vue </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/nuxt.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> Nuxt </v-tooltip>
-            </div>
-            <div class="tech">
-              <v-tooltip activator="parent" location="top"> Symfony </v-tooltip>
-              <img src="/img/icons/tech/symfony.webp" alt="" />
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/linux.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> Linux </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/bash.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> Bash </v-tooltip>
-            </div>
-            <div class="tech">
-              <v-tooltip activator="parent" location="top"> Cloud Computing </v-tooltip>
-
-              <img src="/img/icons/tech/cloud.svg" alt="" />
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/postgresql.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> PostgreSQL </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/mysql.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> MySQL </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/mongo.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> MongoDB </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/figma.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> Figma </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/ionic.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> Ionic </v-tooltip>
-            </div>
-            <div class="tech">
-              <img src="/img/icons/tech/capacitor.webp" alt="" />
-              <v-tooltip activator="parent" location="top"> Capacitor </v-tooltip>
+            <div v-for="(skill, index) of principalSkills" :key="index" class="tech">
+              <img draggable="false" :src="skill.img" :alt="skill.name" />
+              <v-tooltip activator="parent" location="top"> {{ skill.name }} </v-tooltip>
             </div>
           </div>
           <div class="languages-cont">
             <div class="top">
               <div class="top-left">
-                <div class="chip"><p>Lenguajes</p></div>
-                <a href="https://cert.efset.org/CgECYy" target="_blank" class="ver">
-                  Ver <br />
-                  Certificado
-                  <img src="/img/icons/view.svg" alt="" />
+                <div class="chip">
+                  <p>{{ $t('languages') }}</p>
+                </div>
+                <a
+                  draggable="false"
+                  href="https://cert.efset.org/CgECYy"
+                  target="_blank"
+                  class="ver"
+                >
+                  {{ $t('view') }}
+                  <img draggable="false" src="/img/icons/view.svg" alt="" />
                 </a>
                 <a
                   href="https://certificates-eu-west-1.efset.org/v2/certificates/CgECYy/pdf?locale=en"
                   target="_blank"
                   class="descargar"
+                  draggable="false"
                 >
-                  Descargar<br />
-                  Certificado
-                  <img src="/img/icons/download.svg" alt="" />
+                  {{ $t('download') }}
+                  <img draggable="false" src="/img/icons/download.svg" alt="" />
                 </a>
               </div>
               <div class="top-right">
                 <p>
-                  Español <br />
-                  -&nbsp;Nativo <br />
-                  Ingles <br />
-                  -&nbsp;Reading: C2 Proficient <br />
-                  -&nbsp;Listening: B2 Upper Intermediate<br />
+                  {{ $t('spanish') }} <br />
+                  -&nbsp;{{ $t('native') }} <br />
+                  {{ $t('english') }} <br />
+                  -&nbsp;{{ $t('reading') }} <br />
+                  -&nbsp;{{ $t('listening') }}<br />
                 </p>
               </div>
             </div>
             <div class="bottom">
               <div class="chip">
-                <p>Skills secundarias</p>
+                <p>{{ $t('secondarySkills') }}</p>
               </div>
-              <div class="tech">
-                <img src="/img/icons/tech/typescript.webp" alt="" />
-                <v-tooltip activator="parent" location="top"> Typescript </v-tooltip>
-              </div>
-              <div class="tech">
-                <img src="/img/icons/tech/angular.webp" alt="" />
-                <v-tooltip activator="parent" location="top"> Angular </v-tooltip>
-              </div>
-              <div class="tech">
-                <img src="/img/icons/tech/jquery.webp" alt="" />
-                <v-tooltip activator="parent" location="top"> JQuery </v-tooltip>
-              </div>
-              <div class="tech">
-                <img src="/img/icons/tech/react.webp" alt="" />
-                <v-tooltip activator="parent" location="top"> React </v-tooltip>
-              </div>
-              <div class="tech">
-                <img src="/img/icons/tech/next.webp" alt="" />
-                <v-tooltip activator="parent" location="top"> NextJS </v-tooltip>
-              </div>
-              <div class="tech">
-                <img src="/img/icons/tech/python.webp" alt="" />
-                <v-tooltip activator="parent" location="top"> Python </v-tooltip>
-              </div>
-              <div class="tech">
-                <img src="/img/icons/tech/docker.webp" alt="" />
-                <v-tooltip activator="parent" location="top"> Docker </v-tooltip>
+
+              <div v-for="(skill, index) of secondarySkills" :key="index" class="tech">
+                <img draggable="false" :src="skill.img" :alt="skill.name" />
+                <v-tooltip activator="parent" location="top"> {{ skill.name }} </v-tooltip>
               </div>
             </div>
           </div>
@@ -196,7 +94,7 @@ import Card from './../components/profile/Card.vue'
 
 import usePerfil from './../composables/usePerfil.js'
 
-const { cardsData } = usePerfil()
+const { principalSkills, secondarySkills, cardsData } = usePerfil()
 </script>
 
 <style lang="scss" scoped>
@@ -225,7 +123,7 @@ const { cardsData } = usePerfil()
   height: 70px;
   cursor: pointer;
   img {
-    width: 40px;
+    width: 30px;
     transition: 0.8s;
     &:hover {
       transform: scale(2);
@@ -234,15 +132,14 @@ const { cardsData } = usePerfil()
 }
 .contact {
   display: flex;
-  align-items: center;
-  margin: auto;
+  align-items: flex-start;
   background: rgba(50, 210, 219, 0);
   width: 100%;
-  height: 100%;
+  height: 97%;
   .contact-glass {
     margin: auto;
     width: 90%;
-    height: 90%;
+    height: 97%;
     background: rgba(44, 48, 50, 0.51);
     border-radius: 42px;
     overflow-y: auto;
@@ -250,8 +147,8 @@ const { cardsData } = usePerfil()
     border: 1px solid rgba(222, 222, 222, 0.47);
     .header {
       color: rgba(202, 242, 262, 0.7);
-      height: 10%;
-      padding: 20px;
+      height: 7%;
+      padding: 10px 30px;
       font-size: 20px;
       border: 1px solid rgba(222, 222, 222, 0.47);
       border-radius: 42px 42px 0 0;
@@ -259,7 +156,7 @@ const { cardsData } = usePerfil()
     .body {
       display: flex;
       width: 100%;
-      height: 50%;
+      height: 43%;
       .left {
         display: flex;
         width: 50%;
@@ -274,7 +171,7 @@ const { cardsData } = usePerfil()
           width: 30%;
           height: 100%;
           img {
-            width: 90%;
+            width: 70%;
             opacity: 0.7;
             border-radius: 10px;
           }
@@ -377,7 +274,7 @@ const { cardsData } = usePerfil()
             .top-right {
               display: flex;
               width: 65%;
-              t: 100%;
+              height: 100%;
               padding: 20px;
               p {
                 color: rgba(252, 252, 252, 0.73);
@@ -412,7 +309,7 @@ const { cardsData } = usePerfil()
       align-items: center;
       overflow-y: auto;
       width: 100%;
-      height: 40%;
+      height: 50%;
       border: 1px solid rgba(252, 252, 252, 0.73);
       border-radius: 0px 0px 40px 40px;
       &:hover {
@@ -449,6 +346,12 @@ const { cardsData } = usePerfil()
   }
 }
 @media screen and (max-width: 500px) {
+  .chip {
+    p {
+      padding: 0px 7px;
+      font-size: 14px;
+    }
+  }
   .tech {
     width: 40px;
     height: 70px;
@@ -540,6 +443,19 @@ const { cardsData } = usePerfil()
           .languages-cont {
             width: 100%;
             height: auto;
+            .top {
+              .top-right {
+                padding: 30px;
+                p {
+                  font-size: 10px;
+                }
+              }
+              .top-left {
+                a {
+                  font-size: 10px !important;
+                }
+              }
+            }
           }
         }
       }

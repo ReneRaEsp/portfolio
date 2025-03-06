@@ -21,10 +21,10 @@
         <img class="icon" src="/img/icons/gitlab.png" alt="" draggable="false" />
         <v-tooltip activator="parent" location="top"> Gitlab </v-tooltip>
       </a>
-      <a href="https://www.linkedin.com/in/rene-ramirez-6674b31a5/" target="_blank" class="item">
+      <!--<a href="https://www.linkedin.com/in/rene-ramirez-6674b31a5/" target="_blank" class="item">
         <img class="icon" src="/img/icons/linkedin.png" alt="" draggable="false" />
         <v-tooltip activator="parent" location="top"> Linkedin </v-tooltip>
-      </a>
+      </a>-->
       <a href="https://cert.efset.org/CgECYy" target="_blank" class="item">
         <img class="icon" src="/img/icons/efset.jpeg" alt="" draggable="false" />
         <v-tooltip activator="parent" location="top"> EF Set </v-tooltip>

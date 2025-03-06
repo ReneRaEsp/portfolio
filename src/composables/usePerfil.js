@@ -1,76 +1,115 @@
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 const usePerfil = () => {
+  const { t } = useI18n()
   const currentEmail = ref('rdejramirez@gmail.com')
   const currentPhone = ref('+51912569594')
 
   const cardsData = ref([
     {
-      title: 'Diseño y Desarrollo de Sitios Web',
-      text: 'Diseño y desarrollo sitios web modernos responsive y personalizados, adaptados a tus necesidades y objetivos. Me aseguro de que cada proyecto sea atractivo, funcional y optimizado para brindar una experiencia de usuario excepcional, logrando así un rendimiento eficiente y profesional.',
+      title: `${t('card-1-title')}`,
+      text: `${t('card-1-text')}`,
       image: '/img/web.webp',
       links: [
-        `https://wa.me/${currentPhone}?text=Hola René, Me gustaría conocer más sobre tu servicio de diseño y desarrollo web`,
-        `mailto:${currentEmail}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20diseño%20y%20desarrollo%20web%20`,
+        `https://wa.me/${currentPhone.value}?text=Hola René, Me gustaría conocer más sobre tu servicio de diseño y desarrollo web`,
+        `mailto:${currentEmail.value}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20diseño%20y%20desarrollo%20web%20`,
       ],
     },
     {
-      title: 'Desarrollo de Aplicaciones Web',
-      text: 'Creo aplicaciones web dinámicas y escalables, utilizando tecnologías de vanguardia para garantizar rapidez, seguridad y facilidad de uso. Cada aplicación está pensada para adaptarse a las necesidades específicas de tu negocio.',
+      title: `${t('card-2-title')}`,
+      text: `${t('card-2-text')}`,
       image: '/img/app-development.webp',
       links: [
-        `https://wa.me/${currentPhone}?text=Hola René, Me gustaría conocer más sobre tu servicio de desarrollo de aplicaciones web`,
-        `mailto:${currentEmail}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20desarrollo%20de%20aplicaciones%20web%20`,
+        `https://wa.me/${currentPhone.value}?text=Hola René, Me gustaría conocer más sobre tu servicio de desarrollo de aplicaciones web`,
+        `mailto:${currentEmail.value}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20desarrollo%20de%20aplicaciones%20web%20`,
       ],
     },
     {
-      title: 'Optimización SEO',
-      text: 'Mejoro de el posicionamiento de tu sitio web en los motores de búsqueda, aplicando estrategias SEO avanzadas. Desde la optimización de contenido hasta el aumento de la velocidad de carga y la estructura del sitio, te ayudo a atraer más visitantes y convertirlos en clientes potenciales.',
+      title: `${t('card-3-title')}`,
+      text: `${t('card-3-text')}`,
       image: '/img/seo.webp',
       links: [
-        `https://wa.me/${currentPhone}?text=Hola René, Me gustaría conocer más sobre tu servicio de optimización SEO`,
-        `mailto:${currentEmail}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20optimización%20SEO%20`,
+        `https://wa.me/${currentPhone.value}?text=Hola René, Me gustaría conocer más sobre tu servicio de optimización SEO`,
+        `mailto:${currentEmail.value}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20optimización%20SEO%20`,
       ],
     },
     {
-      title: 'Web Scraping',
-      text: 'Extraigo, analizo y estructuro datos valiosos de la web de manera eficiente y automatizada. Si necesitas obtener información clave para estudios de mercado, análisis de competencia o cualquier otro propósito, puedo desarrollar herramientas personalizadas para simplificar el proceso y brindarte datos precisos.',
+      title: `${t('card-4-title')}`,
+      text: `${t('card-4-text')}`,
       image: '/img/scraping.webp',
       links: [
-        `https://wa.me/${currentPhone}?text=Hola René, Me gustaría conocer más sobre tu servicio de web scraping`,
-        `mailto:${currentEmail}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20web%20scraping%20`,
+        `https://wa.me/${currentPhone.value}?text=Hola René, Me gustaría conocer más sobre tu servicio de web scraping`,
+        `mailto:${currentEmail.value}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20web%20scraping%20`,
       ],
     },
     {
-      title: 'Desarrollo de Web API',
-      text: 'Diseño y programo APIs seguras y eficientes que permiten la integración fluida entre diferentes plataformas y aplicaciones. Ya sea para conectar servicios, gestionar bases de datos o facilitar la comunicación entre sistemas, me aseguro de que la API sea escalable, segura y bien documentada.',
+      title: `${t('card-5-title')}`,
+      text: `${t('card-5-text')}`,
       image: '/img/api.webp',
       links: [
-        `https://wa.me/${currentPhone}?text=Hola René, Me gustaría conocer más sobre tu servicio de desarrollo de APIs`,
-        `mailto:${currentEmail}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20desarrollo%20de%20APIs%20`,
+        `https://wa.me/${currentPhone.value}?text=Hola René, Me gustaría conocer más sobre tu servicio de desarrollo de APIs`,
+        `mailto:${currentEmail.value}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20desarrollo%20de%20APIs%20`,
       ],
     },
     {
-      title: 'Desarrollo de Aplicaciones Móviles',
-      text: 'Desarrollo aplicaciones móviles innovadoras y personalizadas para iOS y Android, garantizando un diseño intuitivo, una navegación fluida y un rendimiento óptimo. Me enfoco en crear apps que brinden la mejor experiencia al usuario.',
+      title: `${t('card-6-title')}`,
+      text: `${t('card-6-text')}`,
       image: '/img/development.webp',
       links: [
-        `https://wa.me/${currentPhone}?text=Hola René, Me gustaría conocer más sobre tu servicio de desarrollo de aplicaciones móviles`,
-        `mailto:${currentEmail}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20desarrollo%20de%20aplicaciones%20móviles%20`,
+        `https://wa.me/${currentPhone.value}?text=Hola René, Me gustaría conocer más sobre tu servicio de desarrollo de aplicaciones móviles`,
+        `mailto:${currentEmail.value}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20desarrollo%20de%20aplicaciones%20móviles%20`,
       ],
     },
     {
-      title: 'Detección y Solución de Errores',
-      text: 'Analizo, identifico y soluciono errores en sitios web y aplicaciones para garantizar su correcto funcionamiento, me encargo de encontrar la causa raíz y aplicar las soluciones necesarias para que todo funcione.',
+      title: `${t('card-7-title')}`,
+      text: `${t('card-7-text')}`,
       image: '/img/debugging.webp',
       links: [
-        `https://wa.me/${currentPhone}?text=Hola René, Me gustaría conocer más sobre tu servicio de detección y solución de errores`,
-        `mailto:${currentEmail}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20detección%20y%20solución%20de%20errores%20`,
+        `https://wa.me/${currentPhone.value}?text=Hola René, Me gustaría conocer más sobre tu servicio de detección y solución de errores`,
+        `mailto:${currentEmail.value}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20detección%20y%20solución%20de%20errores%20`,
       ],
     },
   ])
 
+  const principalSkills = ref([
+    { name: 'HTML', img: '/img/icons/tech/html.webp' },
+    { name: 'CSS', img: '/img/icons/tech/css.webp' },
+    { name: 'Javascript', img: '/img/icons/tech/javascript.webp' },
+    { name: 'PHP', img: '/img/icons/tech/php.webp' },
+    { name: 'Wordpress', img: '/img/icons/tech/wordpress.png' },
+    { name: 'Elementor', img: '/img/icons/tech/elementor.webp' },
+    { name: 'Woocommerce', img: '/img/icons/tech/woocommerce.webp' },
+    { name: 'Node', img: '/img/icons/tech/node.webp' },
+    { name: 'Express', img: '/img/icons/tech/express.webp' },
+    { name: 'Laravel', img: '/img/icons/tech/laravel.webp' },
+    { name: 'Vue', img: '/img/icons/tech/vue.webp' },
+    { name: 'Nuxt', img: '/img/icons/tech/nuxt.webp' },
+    { name: 'Symfony', img: '/img/icons/tech/symfony.webp' },
+    { name: 'Linux', img: '/img/icons/tech/linux.webp' },
+    { name: 'Bash', img: '/img/icons/tech/bash.webp' },
+    { name: 'Cloud Computing', img: '/img/icons/tech/cloud.svg' },
+    { name: 'PostgreSQL', img: '/img/icons/tech/postgresql.webp' },
+    { name: 'MySQL', img: '/img/icons/tech/mysql.webp' },
+    { name: 'MongoDB', img: '/img/icons/tech/mongo.webp' },
+    { name: 'Figma', img: '/img/icons/tech/figma.webp' },
+    { name: 'Ionic', img: '/img/icons/tech/ionic.webp' },
+    { name: 'Capacitor', img: '/img/icons/tech/capacitor.webp' },
+  ])
+
+  const secondarySkills = ref([
+    { name: 'Typescript', img: '/img/icons/tech/typescript.webp' },
+    { name: 'Angular', img: '/img/icons/tech/angular.webp' },
+    { name: 'JQuery', img: '/img/icons/tech/jquery.webp' },
+    { name: 'React', img: '/img/icons/tech/react.webp' },
+    { name: 'NextJS', img: '/img/icons/tech/next.webp' },
+    { name: 'Python', img: '/img/icons/tech/python.webp' },
+    { name: 'Docker', img: '/img/icons/tech/docker.webp' },
+  ])
+
   return {
+    principalSkills,
+    secondarySkills,
     cardsData,
   }
 }
