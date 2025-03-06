@@ -23,7 +23,7 @@
             </div>
 
             <div v-for="(skill, index) of principalSkills" :key="index" class="tech">
-              <img draggable="false" :src="skill.img" :alt="skill.name" />
+              <img draggable="false" :src="`${urlBase}${skill.img}`" :alt="skill.name" />
               <v-tooltip activator="parent" location="top"> {{ skill.name }} </v-tooltip>
             </div>
           </div>
@@ -68,7 +68,7 @@
               </div>
 
               <div v-for="(skill, index) of secondarySkills" :key="index" class="tech">
-                <img draggable="false" :src="skill.img" :alt="skill.name" />
+                <img draggable="false" :src="`${urlBase}${skill.img}`" :alt="skill.name" />
                 <v-tooltip activator="parent" location="top"> {{ skill.name }} </v-tooltip>
               </div>
             </div>
@@ -90,9 +90,12 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import Card from './../components/profile/Card.vue'
 
 import usePerfil from './../composables/usePerfil.js'
+
+const urlBase = ref(import.meta.env.BASE_URL)
 
 const { principalSkills, secondarySkills, cardsData } = usePerfil()
 </script>

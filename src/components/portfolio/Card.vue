@@ -8,7 +8,7 @@
     class="card"
   >
     <div class="img-cont">
-      <img draggable="false" :src="currentImage" alt="" />
+      <img draggable="false" :src="`${urlBase}${currentImage}`" alt="" />
     </div>
     <div class="data-cont">
       <h2>{{ title }}</h2>
@@ -24,6 +24,8 @@
 
 <script setup>
 import { ref, defineProps } from 'vue'
+
+const urlBase = ref(import.meta.env.BASE_URL)
 
 const props = defineProps({
   images: Array,

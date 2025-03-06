@@ -13,7 +13,11 @@
       <img
         class="menu-icon"
         draggable="false"
-        :src="route.fullPath === '/' ? '/img/icons/perfil.png' : `/img/icons${route.fullPath}.png`"
+        :src="
+          route.fullPath === '/'
+            ? `${urlBase}/img/icons/perfil.png`
+            : `${urlBase}/img/icons${route.fullPath}.png`
+        "
         alt=""
       />
       <div class="menu-indicator" v-if="route?.fullPath === '/'">{{ $t('profile') }}</div>
@@ -54,6 +58,8 @@ const fechaHora = ref(new Date())
 const showMenu = ref(false)
 const showLanguages = ref(false)
 const { locale } = useI18n()
+
+const urlBase = ref(import.meta.env.BASE_URL)
 
 const actualizarHora = () => {
   fechaHora.value = new Date()

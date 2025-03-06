@@ -2,7 +2,7 @@
   <div class="card">
     <div class="header">
       <div class="img-cont">
-        <img draggable="false" :src="image" alt="" />
+        <img draggable="false" :src="`${urlBase}${image}`" alt="" />
       </div>
       <div class="title-cont">
         {{ title }}
@@ -28,7 +28,8 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
+import { ref, defineProps } from 'vue'
+const urlBase = ref(import.meta.env.BASE_URL)
 
 const props = defineProps({
   title: String,

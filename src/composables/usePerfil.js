@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const usePerfil = () => {
@@ -6,7 +6,7 @@ const usePerfil = () => {
   const currentEmail = ref('rdejramirez@gmail.com')
   const currentPhone = ref('+51912569594')
 
-  const cardsData = ref([
+  const cardsData = computed(() => [
     {
       title: `${t('card-1-title')}`,
       text: `${t('card-1-text')}`,
