@@ -130,11 +130,13 @@ a {
   text-decoration: none;
   color: rgba(230, 230, 230, 0.85);
 }
+
 @media screen and (max-width: 500px) {
   .card {
-    width: 300px;
-    height: 60%;
+    width: 250px;
+    height: 100%;
     margin: 0 10px;
+    background: rgba(0, 0, 255, 0);
     .header {
       min-height: 50px;
       padding: 7px 20px;
@@ -156,8 +158,8 @@ a {
     }
   }
   .body-card {
-    font-size: 9px !important;
-    padding: 6px !important;
+    font-size: 11px !important;
+    padding: 10px !important;
     text-align: justify;
   }
 }

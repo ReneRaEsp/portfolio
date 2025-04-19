@@ -94,6 +94,7 @@ import MaxiCard from './../components/contact/MaxiCard.vue'
 @media screen and (max-width: 770px) {
   .contact {
     .contact-glass {
+      border-radius: 3px;
       .left {
         width: 100%;
         height: auto;

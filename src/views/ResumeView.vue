@@ -59,9 +59,6 @@
 
 <script setup>
 import Card from './../components/resume/Card.vue'
-
-const lorem =
-  'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremquelaudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architectobeatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatemaccusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis etquasi architecto beatae vitae dicta sunt explicabo.'
 </script>
 
 <style lang="scss" scoped>
@@ -110,6 +107,7 @@ const lorem =
 @media screen and (max-width: 770px) {
   .resume {
     .resume-glass {
+      border-radius: 03px;
       .left {
         width: 100%;
         height: auto;

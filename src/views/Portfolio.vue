@@ -138,4 +138,11 @@ import Card from './../components/portfolio/Card.vue'
 .portfolio::-webkit-scrollbar-thumb:hover {
   background: rgba(53, 191, 165, 00.9) !important;
 }
+
+@media screen and (max-width: 400px) {
+  .portfolio {
+    width: 100%;
+    padding: 0px;
+  }
+}
 </style>

@@ -85,6 +85,33 @@ const props = defineProps({
 
 @media screen and (max-width: 500px) {
   .card {
+    .title {
+      flex-wrap: wrap;
+      .first-exp {
+        text-align: center;
+        width: 100%;
+        font-size: 14px;
+        padding: 05px;
+      }
+      .first-edu {
+        text-align: center;
+        width: 100%;
+        font-size: 14px;
+        padding: 05px;
+      }
+      .place {
+        width: 50%;
+        font-size: 10px;
+        text-align: center;
+        padding: 05px 0;
+      }
+      .dates {
+        width: 50%;
+        font-size: 10px;
+        text-align: center;
+        padding: 05px;
+      }
+    }
     .copy-cont-mobile {
       display: flex;
     }

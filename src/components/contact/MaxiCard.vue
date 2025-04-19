@@ -70,6 +70,9 @@ const props = defineProps({
     .copy-cont-mobile {
       display: flex;
     }
+    .text {
+      padding: 15px;
+    }
   }
 }
 </style>

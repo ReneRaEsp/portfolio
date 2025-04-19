@@ -75,7 +75,9 @@
           </div>
         </div>
       </div>
-      <div class="footer">
+      <div
+        class="footer"
+      >
         <Card
           v-for="(card, index) of cardsData"
           :key="index"
@@ -363,7 +365,13 @@ const { principalSkills, secondarySkills, cardsData } = usePerfil()
     }
   }
   .contact {
+    border-radius: 0px;
     .contact-glass {
+      border-radius: 0px;
+      .header {
+        border-radius: 0;
+        padding: 0 10px;
+      }
       .body {
         display: flex;
         flex-wrap: wrap;
@@ -392,11 +400,26 @@ const { principalSkills, secondarySkills, cardsData } = usePerfil()
           .languages-cont {
             width: 100%;
             height: auto;
+            .top {
+              .top-right {
+                padding: 30px;
+                p {
+                  font-size: 10px;
+                }
+              }
+              .top-left {
+                a {
+                  font-size: 10px !important;
+                }
+              }
+            }
           }
         }
       }
       .footer {
-        padding-top: 0;
+        padding: 15px 0;
+        border-radius: 0;
+        align-items: flex-start;
       }
     }
   }
@@ -446,29 +469,10 @@ const { principalSkills, secondarySkills, cardsData } = usePerfil()
           .languages-cont {
             width: 100%;
             height: auto;
-            .top {
-              .top-right {
-                padding: 30px;
-                p {
-                  font-size: 10px;
-                }
-              }
-              .top-left {
-                a {
-                  font-size: 10px !important;
-                }
-              }
-            }
           }
         }
       }
-      .footer {
-        padding-top: 0;
-      }
     }
-  }
-  .mis-servicios {
-    display: none;
   }
 }
 </style>

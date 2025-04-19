@@ -121,4 +121,24 @@ const stopHover = () => {
     }
   }
 }
+
+@media screen and (max-width: 425px) {
+  .card {
+    min-height: auto;
+    padding-bottom: 5px;
+    .data-cont {
+      padding: 7px 17px;
+    }
+    .stack-cont {
+      padding: 0px 15px;
+      .tech {
+        width: 35px;
+        height: 40px;
+        img {
+          width: 25px;
+        }
+      }
+    }
+  }
+}
 </style>
