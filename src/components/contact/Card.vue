@@ -96,6 +96,7 @@ const props = defineProps({
       justify-content: flex-end;
       width: 60%;
       padding: 0px;
+      font-size: 12.5px;
     }
     .img {
       display: none;

@@ -352,6 +352,7 @@ const { principalSkills, secondarySkills, cardsData } = usePerfil()
 }
 @media screen and (max-width: 500px) {
   .chip {
+    width: 100%;
     p {
       padding: 0px 7px;
       font-size: 14px;

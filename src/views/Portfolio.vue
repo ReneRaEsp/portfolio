@@ -1,6 +1,6 @@
 <template>
   <div class="portfolio">
-    <Card
+    <!--<Card
       :images="[
         '/img/projects/LaTaula.webp',
         '/img/projects/LaTaula2.webp',
@@ -8,6 +8,56 @@
       ]"
       title="La Taula"
       link="https://lataula.info/"
+      :technologies="[
+        { name: 'HTML', img: 'img/icons/tech/html.webp' },
+        { name: 'CSS', img: 'img/icons/tech/css.webp' },
+        { name: 'Javascript', img: 'img/icons/tech/javascript.webp' },
+        { name: 'PHP', img: 'img/icons/tech/php.webp' },
+        { name: 'Wordpress', img: 'img/icons/tech/wordpress.png' },
+        { name: 'Elementor', img: 'img/icons/tech/elementor.webp' },
+      ]"
+    />-->
+    <Card
+      :images="[
+        '/img/projects/BarcelonaArtOfTravel.webp',
+        '/img/projects/barcelonaartoftravel2.webp',
+        '/img/projects/barcelonaartoftravel3.webp',
+      ]"
+      title="Barcelona Art Of Travel"
+      link="https://barcelonaartoftravel.com/"
+      :technologies="[
+        { name: 'HTML', img: 'img/icons/tech/html.webp' },
+        { name: 'CSS', img: 'img/icons/tech/css.webp' },
+        { name: 'Javascript', img: 'img/icons/tech/javascript.webp' },
+        { name: 'PHP', img: 'img/icons/tech/php.webp' },
+        { name: 'Wordpress', img: 'img/icons/tech/wordpress.png' },
+        { name: 'Elementor', img: 'img/icons/tech/elementor.webp' },
+      ]"
+    />
+    <Card
+      :images="[
+        '/img/projects/CalvariPizza.webp',
+        '/img/projects/CalvariPizza2.webp',
+        '/img/projects/CalvariPizza3.webp',
+      ]"
+      title="Calvari Pizza"
+      link="https://calvaripizza.com/"
+      :technologies="[
+        { name: 'HTML', img: 'img/icons/tech/html.webp' },
+        { name: 'CSS', img: 'img/icons/tech/css.webp' },
+        { name: 'Javascript', img: 'img/icons/tech/javascript.webp' },
+        { name: 'PHP', img: 'img/icons/tech/php.webp' },
+        { name: 'Wordpress', img: 'img/icons/tech/wordpress.png' },
+        { name: 'Elementor', img: 'img/icons/tech/elementor.webp' },
+      ]"
+    />
+    <Card
+      :images="[
+        '/img/projects/Elclickartistico.webp',
+        '/img/projects/Elclickartistico2.webp',
+      ]"
+      title="El Click Artistico"
+      link="https://elclickartistico.com/"
       :technologies="[
         { name: 'HTML', img: 'img/icons/tech/html.webp' },
         { name: 'CSS', img: 'img/icons/tech/css.webp' },
@@ -90,9 +140,10 @@
     />
     <Card
       :images="[
+        '/img/projects/Simoft.webp',
         '/img/projects/Hosteleria.webp',
         '/img/projects/Hosteleria2.webp',
-        '/img/projects/Hosteleria3.webp',
+        //'/img/projects/Hosteleria3.webp',
       ]"
       title="Web App Hosteleria"
       link="#"

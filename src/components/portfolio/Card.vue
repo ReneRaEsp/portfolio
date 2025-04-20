@@ -128,6 +128,9 @@ const stopHover = () => {
     padding-bottom: 5px;
     .data-cont {
       padding: 7px 17px;
+      h2 {
+        font-size: 14px;
+      }
     }
     .stack-cont {
       padding: 0px 15px;

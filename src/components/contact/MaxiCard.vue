@@ -72,6 +72,7 @@ const props = defineProps({
     }
     .text {
       padding: 15px;
+      font-size: 14px;
     }
   }
 }
