@@ -402,6 +402,7 @@ const { principalSkills, secondarySkills, cardsData } = usePerfil()
             width: 100%;
             height: auto;
             .top {
+              height: auto;
               .top-right {
                 padding: 30px;
                 p {
@@ -414,6 +415,12 @@ const { principalSkills, secondarySkills, cardsData } = usePerfil()
                 }
               }
             }
+            .bottom {
+              .tech {
+                padding: 0;
+                height: 51px;
+              }
+            }
           }
         }
       }
@@ -421,6 +428,8 @@ const { principalSkills, secondarySkills, cardsData } = usePerfil()
         padding: 15px 0;
         border-radius: 0;
         align-items: flex-start;
+        height: auto;
+        padding-bottom: 30px;
       }
     }
   }

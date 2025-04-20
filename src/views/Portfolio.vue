@@ -145,7 +145,7 @@
         '/img/projects/Hosteleria2.webp',
         //'/img/projects/Hosteleria3.webp',
       ]"
-      title="Web App Hosteleria"
+      title="Simoft (Web App Hosteleria)"
       link="#"
       :technologies="[
         { name: 'HTML', img: 'img/icons/tech/html.webp' },
