@@ -52,10 +52,7 @@
       ]"
     />
     <Card
-      :images="[
-        '/img/projects/Elclickartistico.webp',
-        '/img/projects/Elclickartistico2.webp',
-      ]"
+      :images="['/img/projects/Elclickartistico.webp', '/img/projects/Elclickartistico2.webp']"
       title="El Click Artistico"
       link="https://elclickartistico.com/"
       :technologies="[
@@ -145,8 +142,8 @@
         '/img/projects/Hosteleria2.webp',
         //'/img/projects/Hosteleria3.webp',
       ]"
-      title="Simoft (Web App Hosteleria)"
-      link="#"
+      title="Cocina Sinfonia (Web App Hosteleria)"
+      link="https://renegade.alwaysdata.net"
       :technologies="[
         { name: 'HTML', img: 'img/icons/tech/html.webp' },
         { name: 'CSS', img: 'img/icons/tech/css.webp' },
