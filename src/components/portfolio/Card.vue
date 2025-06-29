@@ -3,39 +3,81 @@
     @mouseenter="onHover"
     @mouseleave="stopHover"
     draggable="false"
-    :href="link"
+    :href="props.project.links?.url"
     target="_blank"
     class="card"
+    v-if="!props.project.isDownloadable"
   >
     <div class="img-cont">
       <img draggable="false" :src="`${urlBase}${currentImage}`" alt="" />
     </div>
     <div class="data-cont">
-      <h2>{{ title }}</h2>
+      <h2>{{ props.project?.title }}</h2>
     </div>
     <div class="stack-cont">
-      <div v-for="tech of technologies" :key="tech.name" class="tech">
+      <div v-for="tech of props.project?.technologies" :key="tech.name" class="tech">
         <img :src="tech.img" alt="" />
         <v-tooltip activator="parent" location="top"> {{ tech.name }} </v-tooltip>
       </div>
     </div>
   </a>
+  <div
+    @mouseenter="onHover"
+    @mouseleave="stopHover"
+    draggable="false"
+    :href="props.project?.links?.url"
+    target="_blank"
+    class="card"
+    v-else-if="props.project?.isDownloadable"
+  >
+    <div class="img-cont">
+      <img draggable="false" :src="`${urlBase}${currentImage}`" alt="" />
+    </div>
+    <div class="data-cont">
+      <h2>{{ props?.project?.title }}</h2>
+    </div>
+    <div class="stack-cont stack-cont-med">
+      <a
+        class="btn"
+        href="https://www.dropbox.com/scl/fi/7tm76t6lsvj1n429hme99/carwash-demo.apk?rlkey=b6slb0qbicjpbxk9eir98g3gj&st=x5o488lq&dl=0
+"
+        target="_blank"
+        ><span v-if="$i18n.locale === 'en'">{{ props.project.links?.view?.text?.en }}</span
+        ><span v-else-if="$i18n.locale === 'eo'">{{ props.project.links?.view?.text?.eo }}</span
+        ><span v-else>{{ props.project.links?.view?.text?.es }}</span></a
+      >
+      <a
+        class="btn"
+        href="https://www.dropbox.com/scl/fi/7tm76t6lsvj1n429hme99/carwash-demo.apk?rlkey=b6slb0qbicjpbxk9eir98g3gj&st=x5o488lq&dl=0
+"
+        target="_blank"
+        ><span v-if="$i18n.locale === 'en'">{{ props.project.links?.view?.text?.en }}</span
+        ><span v-else-if="$i18n.locale === 'eo'">{{ props.project.links?.view?.text?.eo }}</span
+        ><span v-else>{{ props.project.links?.download?.text?.es }}</span></a
+      >
+    </div>
+    <div class="stack-cont">
+      <div v-for="tech of props.project?.technologies" :key="tech.name" class="tech">
+        <img :src="tech.img" alt="" />
+        <v-tooltip activator="parent" location="top"> {{ tech.name }} </v-tooltip>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import { ref, defineProps } from 'vue'
+import { ref } from 'vue'
 
-const urlBase = ref(import.meta.env.BASE_URL)
+const urlBase = import.meta.env.BASE_URL
 
 const props = defineProps({
-  images: Array,
-  title: String,
-  link: String,
-  technologies: Array,
+  project: Object,
 })
 
-const imagesArr = ref(props.images)
-const currentImage = ref(props.images[0])
+//https://www.dropbox.com/scl/fi/7tm76t6lsvj1n429hme99/carwash-demo.apk?rlkey=b6slb0qbicjpbxk9eir98g3gj&st=x5o488lq&dl=0
+
+const imagesArr = ref(props.project.images)
+const currentImage = ref(props.project.images[0])
 const times = ref(0)
 
 let intervalid = null
@@ -85,7 +127,8 @@ const stopHover = () => {
     }
   }
 
-  .stack-cont {
+  .stack-cont,
+  .stack-cont-med {
     display: flex;
     flex-wrap: wrap;
     position: relative;
@@ -117,6 +160,25 @@ const stopHover = () => {
         &:hover {
           transform: scale(2);
         }
+      }
+    }
+  }
+  .stack-cont-med {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 0 0 0px 0px;
+    padding: 20px;
+    .btn {
+      border: 1.5px solid rgb(54, 191, 164);
+      padding: 10px;
+      color: rgb(54, 191, 164);
+      text-decoration: none;
+      transition: 0.4s;
+      &:hover {
+        border: 1.5px solid rgba(54, 191, 164, 0);
+        color: rgb(29, 42, 51);
+        background-color: rgba(54, 191, 164, 1);
+        border-radius: 7px;
       }
     }
   }

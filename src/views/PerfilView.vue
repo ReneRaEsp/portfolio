@@ -75,9 +75,7 @@
           </div>
         </div>
       </div>
-      <div
-        class="footer"
-      >
+      <div class="footer">
         <Card
           v-for="(card, index) of cardsData"
           :key="index"
@@ -401,6 +399,7 @@ const { principalSkills, secondarySkills, cardsData } = usePerfil()
           .languages-cont {
             width: 100%;
             height: auto;
+            overflow: hidden;
             .top {
               height: auto;
               .top-right {
