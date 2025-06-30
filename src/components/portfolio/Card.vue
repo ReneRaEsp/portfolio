@@ -220,13 +220,15 @@ const stopHover = () => {
         }
       }
     }
-    .stack-cont-med {
+    .buttons-cont,
+    .buttons-cont-solo {
       .btn {
-        padding-top: 4px;
-        padding-bottom: 4px;
-        padding-left: 10px;
-        margin-top: 5px;
-        margin-bottom: 5px;
+        padding-top: 03px;
+        padding-bottom: 03px;
+        padding-left: 07px;
+        padding-right: 07px;
+        margin-top: 0px;
+        margin-bottom: 0px;
       }
     }
   }

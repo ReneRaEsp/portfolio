@@ -34,8 +34,11 @@
 import Card from './../components/portfolio/Card.vue'
 
 import usePortfolio from '@/composables/usePortfolio'
+import usePreload from '@/composables/usePreload'
 
 const { projects } = usePortfolio()
+const { preloadSleep } = usePreload()
+preloadSleep()
 </script>
 
 <style lang="scss" scope>
@@ -67,7 +70,9 @@ const { projects } = usePortfolio()
 @media screen and (max-width: 400px) {
   .portfolio {
     width: 100%;
-    padding: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 70px;
   }
 }
 </style>

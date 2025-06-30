@@ -94,10 +94,14 @@ import { ref } from 'vue'
 import Card from './../components/profile/Card.vue'
 
 import usePerfil from './../composables/usePerfil.js'
+import usePreload from '@/composables/usePreload'
 
 const urlBase = ref(import.meta.env.BASE_URL)
 
 const { principalSkills, secondarySkills, cardsData } = usePerfil()
+const { preloadSleep } = usePreload()
+
+preloadSleep()
 </script>
 
 <style lang="scss" scoped>
