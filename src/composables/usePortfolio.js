@@ -1,6 +1,30 @@
 const usePortfolio = () => {
   const projects = [
     {
+      title: 'Carwash Fidelización Web App Consulta',
+      links: {
+        view: {
+          text: {
+            es: 'Ver en linea',
+            en: 'View online',
+            eo: '',
+          },
+          url: 'https://carwash-fidelidad-back.onrender.com/',
+        },
+      },
+      isDownloadable: false,
+      images: ['/img/projects/carwash-consulta.webp'],
+      technologies: [
+        { name: 'HTML', img: 'img/icons/tech/html.webp' },
+        { name: 'CSS', img: 'img/icons/tech/css.webp' },
+        { name: 'Javascript', img: 'img/icons/tech/javascript.webp' },
+        { name: 'Vue', img: 'img/icons/tech/vue.webp' },
+        { name: 'Node', img: 'img/icons/tech/node.webp' },
+        { name: 'Express', img: 'img/icons/tech/express.webp' },
+        { name: 'MongoDB', img: 'img/icons/tech/mongo.webp' },
+      ],
+    },
+    {
       title: 'Carwash Fidelización App',
       links: {
         view: {
@@ -9,7 +33,7 @@ const usePortfolio = () => {
             en: 'View online',
             eo: '',
           },
-          url: 'https://www.dropbox.com/scl/fi/7tm76t6lsvj1n429hme99/carwash-demo.apk?rlkey=b6slb0qbicjpbxk9eir98g3gj&st=x5o488lq&dl=0',
+          url: 'https://carwash-fidelidad-back.onrender.com/carwash',
         },
         download: {
           text: {
@@ -21,20 +45,18 @@ const usePortfolio = () => {
         },
       },
       isDownloadable: true,
-      images: [
-        '/img/projects/Atleticlleida.webp',
-        '/img/projects/Atleticlleida2.webp',
-        '/img/projects/Atleticlleida3.webp',
-        '/img/projects/Atleticlleida4.webp',
-      ],
+      images: ['/img/projects/carwash-app.webp', '/img/projects/carwash-app2.webp'],
       technologies: [
         { name: 'HTML', img: 'img/icons/tech/html.webp' },
         { name: 'CSS', img: 'img/icons/tech/css.webp' },
         { name: 'Javascript', img: 'img/icons/tech/javascript.webp' },
-        { name: 'PHP', img: 'img/icons/tech/php.webp' },
-        { name: 'Laravel', img: 'img/icons/tech/laravel.webp' },
-        { name: 'Wordpress', img: 'img/icons/tech/wordpress.png' },
-        { name: 'JQuery', img: 'img/icons/tech/jquery.webp' },
+        { name: 'Vue', img: 'img/icons/tech/vue.webp' },
+        { name: 'Node', img: 'img/icons/tech/node.webp' },
+        { name: 'Express', img: 'img/icons/tech/express.webp' },
+        { name: 'MongoDB', img: 'img/icons/tech/mongo.webp' },
+        { name: 'Ionic', img: 'img/icons/tech/ionic.webp' },
+        { name: 'Android', img: 'img/icons/tech/android.webp' },
+        { name: 'Ios', img: 'img/icons/tech/ios.webp' },
       ],
     },
     {
@@ -152,7 +174,16 @@ const usePortfolio = () => {
     },
     {
       title: 'El Click Artistico',
-      link: 'https://elclickartistico.com/',
+      links: {
+        view: {
+          text: {
+            es: 'Ver en linea',
+            en: 'View online',
+            eo: '',
+          },
+          url: 'https://elclickartistico.com/',
+        },
+      },
       images: ['/img/projects/Elclickartistico.webp', '/img/projects/Elclickartistico2.webp'],
       technologies: [
         { name: 'HTML', img: 'img/icons/tech/html.webp' },

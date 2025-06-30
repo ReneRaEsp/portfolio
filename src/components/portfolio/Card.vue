@@ -1,5 +1,5 @@
 <template>
-  <a
+  <div
     @mouseenter="onHover"
     @mouseleave="stopHover"
     draggable="false"
@@ -20,7 +20,14 @@
         <v-tooltip activator="parent" location="top"> {{ tech.name }} </v-tooltip>
       </div>
     </div>
-  </a>
+    <div class="buttons-cont-solo">
+      <a class="btn" :href="props.project?.links?.view?.url" target="_blank"
+        ><span v-if="$i18n.locale === 'en'">{{ props.project.links?.view?.text?.en }}</span
+        ><span v-else-if="$i18n.locale === 'eo'">{{ props.project.links?.view?.text?.eo }}</span
+        ><span v-else>{{ props.project.links?.view?.text?.es }}</span></a
+      >
+    </div>
+  </div>
   <div
     @mouseenter="onHover"
     @mouseleave="stopHover"
@@ -36,31 +43,23 @@
     <div class="data-cont">
       <h2>{{ props?.project?.title }}</h2>
     </div>
-    <div class="stack-cont stack-cont-med">
-      <a
-        class="btn"
-        href="https://www.dropbox.com/scl/fi/7tm76t6lsvj1n429hme99/carwash-demo.apk?rlkey=b6slb0qbicjpbxk9eir98g3gj&st=x5o488lq&dl=0
-"
-        target="_blank"
-        ><span v-if="$i18n.locale === 'en'">{{ props.project.links?.view?.text?.en }}</span
-        ><span v-else-if="$i18n.locale === 'eo'">{{ props.project.links?.view?.text?.eo }}</span
-        ><span v-else>{{ props.project.links?.view?.text?.es }}</span></a
-      >
-      <a
-        class="btn"
-        href="https://www.dropbox.com/scl/fi/7tm76t6lsvj1n429hme99/carwash-demo.apk?rlkey=b6slb0qbicjpbxk9eir98g3gj&st=x5o488lq&dl=0
-"
-        target="_blank"
-        ><span v-if="$i18n.locale === 'en'">{{ props.project.links?.view?.text?.en }}</span
-        ><span v-else-if="$i18n.locale === 'eo'">{{ props.project.links?.view?.text?.eo }}</span
-        ><span v-else>{{ props.project.links?.download?.text?.es }}</span></a
-      >
-    </div>
     <div class="stack-cont">
       <div v-for="tech of props.project?.technologies" :key="tech.name" class="tech">
         <img :src="tech.img" alt="" />
         <v-tooltip activator="parent" location="top"> {{ tech.name }} </v-tooltip>
       </div>
+    </div>
+    <div class="buttons-cont">
+      <a class="btn" :href="props.project?.links?.view?.url" target="_blank"
+        ><span v-if="$i18n.locale === 'en'">{{ props.project.links?.view?.text?.en }}</span
+        ><span v-else-if="$i18n.locale === 'eo'">{{ props.project.links?.view?.text?.eo }}</span
+        ><span v-else>{{ props.project.links?.view?.text?.es }}</span></a
+      >
+      <a class="btn" :href="props.project?.links?.download?.url" target="_blank"
+        ><span v-if="$i18n.locale === 'en'">{{ props.project.links?.download?.text?.en }}</span
+        ><span v-else-if="$i18n.locale === 'eo'">{{ props.project.links?.download?.text?.eo }}</span
+        ><span v-else>{{ props.project.links?.download?.text?.es }}</span></a
+      >
     </div>
   </div>
 </template>
@@ -73,8 +72,6 @@ const urlBase = import.meta.env.BASE_URL
 const props = defineProps({
   project: Object,
 })
-
-//https://www.dropbox.com/scl/fi/7tm76t6lsvj1n429hme99/carwash-demo.apk?rlkey=b6slb0qbicjpbxk9eir98g3gj&st=x5o488lq&dl=0
 
 const imagesArr = ref(props.project.images)
 const currentImage = ref(props.project.images[0])
@@ -110,13 +107,12 @@ const stopHover = () => {
   min-height: 340px;
   background: rgba(200, 200, 200, 0.13);
   margin: 30px;
-  border-radius: 20px;
+  border-radius: 10px;
   text-decoration: none;
-
   .img-cont {
     img {
       width: 100%;
-      border-radius: 20px 20px 0 0;
+      border-radius: 10px 10px 0 0;
     }
   }
   .data-cont {
@@ -126,16 +122,15 @@ const stopHover = () => {
       font-size: 16px;
     }
   }
-
-  .stack-cont,
-  .stack-cont-med {
+  .stack-cont {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
     position: relative;
     width: 100%;
     height: auto;
-    padding: 0 20px;
-    border-radius: 0 0 20px 20px;
+    padding: 20px 20px;
+    border-radius: 0 0 0px 0px;
     transition:
       background 0.4s,
       box-shadow 0.4s,
@@ -163,24 +158,45 @@ const stopHover = () => {
       }
     }
   }
-  .stack-cont-med {
+  .buttons-cont {
     display: flex;
     justify-content: space-around;
     border-radius: 0 0 0px 0px;
     padding: 20px;
-    .btn {
-      border: 1.5px solid rgb(54, 191, 164);
-      padding: 10px;
-      color: rgb(54, 191, 164);
-      text-decoration: none;
-      transition: 0.4s;
-      &:hover {
-        border: 1.5px solid rgba(54, 191, 164, 0);
-        color: rgb(29, 42, 51);
-        background-color: rgba(54, 191, 164, 1);
-        border-radius: 7px;
-      }
+    &:hover {
+      background: rgba(200, 200, 200, 0.091);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px 0.25px rgba(255, 255, 255, 0.7);
+      border-radius: 0px 0 10px 10px;
     }
+  }
+  .buttons-cont-solo {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 0 0 0px 0px;
+    padding: 20px;
+    &:hover {
+      background: rgba(200, 200, 200, 0.091);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 0 15px 0.25px rgba(255, 255, 255, 0.7);
+      border-radius: 0px 0 10px 10px;
+    }
+  }
+}
+
+.btn {
+  border: 1.5px solid rgb(54, 191, 164);
+  padding: 10px;
+  color: rgb(54, 191, 164);
+  text-decoration: none;
+  transition: 0.4s;
+  &:hover {
+    border: 1.5px solid rgba(54, 191, 164, 0);
+    color: rgb(29, 42, 51);
+    background-color: rgba(54, 191, 164, 1);
+    border-radius: 7px;
   }
 }
 
@@ -202,6 +218,15 @@ const stopHover = () => {
         img {
           width: 25px;
         }
+      }
+    }
+    .stack-cont-med {
+      .btn {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
       }
     }
   }
