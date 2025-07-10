@@ -1,5 +1,9 @@
 const usePreload = () => {
-  const URLS = ['https://renegade.alwaysdata.net', 'https://carwash-fidelidad-back.onrender.com/']
+  const URLS = [
+    'https://renegade.alwaysdata.net',
+    'https://carwash-fidelidad-back.onrender.com/',
+    'https://portfoliobackoffice.netlify.app/',
+  ]
 
   const preloadSleep = async () => {
     let res
