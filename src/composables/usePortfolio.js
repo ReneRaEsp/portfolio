@@ -209,8 +209,8 @@ const usePortfolio = () => {
       isDownloadable: false,
       images: [
         '/img/projects/Simoft.webp',
-        '/img/projects/Hosteleria.webp',
-        '/img/projects/Hosteleria2.webp',
+        //'/img/projects/Hosteleria.webp',
+        //'/img/projects/Hosteleria2.webp',
         //'/img/projects/Hosteleria3.webp',
       ],
       technologies: [

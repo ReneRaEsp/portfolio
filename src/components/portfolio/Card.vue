@@ -9,7 +9,15 @@
     v-if="!props.project.isDownloadable"
   >
     <div class="img-cont">
-      <img draggable="false" :src="`${urlBase}${currentImage}`" alt="" />
+      <v-img
+        aspect-ratio="16/9"
+        :height="240"
+        cover
+        draggable="false"
+        :src="`${urlBase}${currentImage}`"
+        alt=""
+        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+      ></v-img>
     </div>
     <div class="data-cont">
       <h2>{{ props.project?.title }}</h2>
@@ -38,7 +46,15 @@
     v-else-if="props.project?.isDownloadable"
   >
     <div class="img-cont">
-      <img draggable="false" :src="`${urlBase}${currentImage}`" alt="" />
+      <v-img
+        aspect-ratio="16/9"
+        :height="240"
+        cover
+        draggable="false"
+        :src="`${urlBase}${currentImage}`"
+        alt=""
+        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+      ></v-img>
     </div>
     <div class="data-cont">
       <h2>{{ props?.project?.title }}</h2>
@@ -151,9 +167,9 @@ const stopHover = () => {
       cursor: pointer;
       img {
         width: 40px;
-        transition: 0.8s;
+        transition: 1s;
         &:hover {
-          transform: scale(1.8);
+          transform: scale(1.5);
         }
       }
     }
