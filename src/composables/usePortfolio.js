@@ -171,7 +171,7 @@ const usePortfolio = () => {
       links: {
         view: {
           text: {
-            es: 'Ver en la appStore',
+            es: 'Ver en la Play Store',
             en: 'View online',
             eo: '',
           },

@@ -116,7 +116,7 @@ const stopHover = () => {
     }
   }
   .data-cont {
-    padding: 20px;
+    padding: 5px 20px;
     color: rgba(200, 200, 200, 0.93);
     h2 {
       font-size: 16px;
@@ -129,7 +129,7 @@ const stopHover = () => {
     position: relative;
     width: 100%;
     height: auto;
-    padding: 20px 20px;
+    padding: 2px 20px;
     border-radius: 0 0 0px 0px;
     transition:
       background 0.4s,
@@ -146,14 +146,14 @@ const stopHover = () => {
       justify-content: center;
       align-items: center;
       align-content: center;
-      width: 50px;
-      height: 70px;
+      width: 43px;
+      height: 55px;
       cursor: pointer;
       img {
         width: 40px;
         transition: 0.8s;
         &:hover {
-          transform: scale(2);
+          transform: scale(1.8);
         }
       }
     }
@@ -162,7 +162,7 @@ const stopHover = () => {
     display: flex;
     justify-content: space-around;
     border-radius: 0 0 0px 0px;
-    padding: 20px;
+    padding: 10px 10px;
     &:hover {
       background: rgba(200, 200, 200, 0.091);
       backdrop-filter: blur(10px);
@@ -175,7 +175,7 @@ const stopHover = () => {
     display: flex;
     justify-content: flex-end;
     border-radius: 0 0 0px 0px;
-    padding: 20px;
+    padding: 10px 20px;
     &:hover {
       background: rgba(200, 200, 200, 0.091);
       backdrop-filter: blur(10px);
