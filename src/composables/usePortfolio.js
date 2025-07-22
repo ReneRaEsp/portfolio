@@ -1,6 +1,43 @@
 const usePortfolio = () => {
   const projects = [
     {
+      title: 'App de gestion de citas',
+      links: {
+        view: {
+          text: {
+            es: 'Ver en linea',
+            en: 'View online',
+            eo: '',
+          },
+          url: 'https://jitime-api.onrender.com',
+        },
+        repo: '',
+        video: { es: '', en: '', eo: '' },
+      },
+      isDownloadable: false,
+      isActive: true,
+      isLive: true,
+      images: [
+        '/img/projects/jitime1.webp',
+        '/img/projects/jitime2.webp',
+        '/img/projects/jitime3.webp',
+      ],
+      technologies: [
+        { name: 'Vue', img: 'img/icons/tech/vue.webp' },
+        { name: 'Ionic', img: 'img/icons/tech/ionic.webp' },
+        { name: 'Capacitor', img: 'img/icons/tech/capacitor.webp' },
+        { name: 'Node', img: 'img/icons/tech/node.webp' },
+        { name: 'Typescript', img: 'img/icons/tech/typescript.webp' },
+        { name: 'Express', img: 'img/icons/tech/express.webp' },
+        { name: 'MongoDB', img: 'img/icons/tech/mongo.webp' },
+      ],
+      description:
+        'Prototipo de aplicación en la cual un proveedor de un servicio o más puede crear servicios profecionales, seleccionar rangos horarios y semanales disponibles y sus clientes pueden agendar citas a traves de la Aplicación web oficial',
+      instructions: '',
+      instructionsPage: '',
+    },
+
+    {
       title: 'Backoffice para gestionar mis proyectos',
       links: {
         view: {
@@ -100,6 +137,9 @@ const usePortfolio = () => {
         { name: 'Android', img: 'img/icons/tech/android.webp' },
         { name: 'Ios', img: 'img/icons/tech/ios.webp' },
       ],
+      description: '',
+      instructions: '',
+      instructionsPage: '',
     },
     {
       title: 'E-Commerce - Bombas de agua, aceite y gasolina',
@@ -193,6 +233,9 @@ const usePortfolio = () => {
         { name: 'iOS', img: 'img/icons/tech/ios.webp' },
         { name: 'Android', img: 'img/icons/tech/android.webp' },
       ],
+      description: '',
+      instructions: '',
+      instructionsPage: '',
     },
     {
       title: 'Cocina Sinfonia (Web App Hosteleria)',
@@ -222,6 +265,9 @@ const usePortfolio = () => {
         { name: 'Symfony', img: 'img/icons/tech/symfony.webp' },
         { name: 'MySQL', img: 'img/icons/tech/mysql.webp' },
       ],
+      description: '',
+      instructions: '',
+      instructionsPage: '',
     },
     {
       title: 'Aensa',
@@ -249,6 +295,9 @@ const usePortfolio = () => {
         { name: 'Wordpress', img: 'img/icons/tech/wordpress.png' },
         { name: 'Elementor', img: 'img/icons/tech/elementor.webp' },
       ],
+      description: '',
+      instructions: '',
+      instructionsPage: '',
     },
     {
       title: 'El Click Artistico',
@@ -271,6 +320,9 @@ const usePortfolio = () => {
         { name: 'Wordpress', img: 'img/icons/tech/wordpress.png' },
         { name: 'Elementor', img: 'img/icons/tech/elementor.webp' },
       ],
+      description: '',
+      instructions: '',
+      instructionsPage: '',
     },
     {
       title: 'Calvari Pizza',
@@ -298,6 +350,9 @@ const usePortfolio = () => {
         { name: 'Wordpress', img: 'img/icons/tech/wordpress.png' },
         { name: 'Elementor', img: 'img/icons/tech/elementor.webp' },
       ],
+      description: '',
+      instructions: '',
+      instructionsPage: '',
     },
     {
       title: 'Barcelona Art Of Travel',
@@ -325,6 +380,9 @@ const usePortfolio = () => {
         { name: 'Wordpress', img: 'img/icons/tech/wordpress.png' },
         { name: 'Elementor', img: 'img/icons/tech/elementor.webp' },
       ],
+      description: '',
+      instructions: '',
+      instructionsPage: '',
     },
   ]
 

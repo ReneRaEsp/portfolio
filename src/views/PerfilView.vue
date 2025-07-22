@@ -148,7 +148,7 @@ preloadSleep()
     width: 90%;
     height: 97%;
     background: rgba(44, 48, 50, 0.51);
-    border-radius: 42px;
+    border-radius: 5px;
     overflow-y: auto;
     overflow-x: hidden;
     border: 1px solid rgba(222, 222, 222, 0.47);
@@ -158,7 +158,7 @@ preloadSleep()
       padding: 10px 30px;
       font-size: 20px;
       border: 1px solid rgba(222, 222, 222, 0.47);
-      border-radius: 42px 42px 0 0;
+      border-radius: 5px 5px 0 0;
     }
     .body {
       display: flex;

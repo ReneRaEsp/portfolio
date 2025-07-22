@@ -8,15 +8,20 @@
     class="card"
     v-if="!props.project.isDownloadable"
   >
+    <div v-if="project?.description?.length > 0" class="btn-instructions" @click="displayDesc">
+      Descripción
+    </div>
+    <div v-if="project?.instructions?.length > 0" class="btn-description" @click="displayInst">
+      Instrucciones
+    </div>
     <div class="img-cont">
       <v-img
         aspect-ratio="16/9"
         :height="240"
-        cover
+        contain
         draggable="false"
         :src="`${urlBase}${currentImage}`"
-        alt=""
-        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+        :alt="`${props.project?.title}`"
       ></v-img>
     </div>
     <div class="data-cont">
@@ -35,7 +40,26 @@
         ><span v-else>{{ props.project.links?.view?.text?.es }}</span></a
       >
     </div>
+    <div
+      v-if="isAnexDesc && project?.description?.length > 0"
+      class="card card-anex"
+      :class="{
+        closed: !isAnexDesc,
+        opened: isAnexDesc,
+      }"
+    >
+      Descripción
+      <br /><br />
+      {{ project?.description }}
+    </div>
+    <div v-if="isAnexInst && project?.instructions?.length > 0" class="card card-anex">
+      Instrucciones
+      <br /><br />
+      {{ project?.instructions }}
+    </div>
+    <div v-if="isAnexDesc || isAnexInst" @click="closeBoth" class="btn close-btn">Cerrar</div>
   </div>
+
   <div
     @mouseenter="onHover"
     @mouseleave="stopHover"
@@ -45,11 +69,17 @@
     class="card"
     v-else-if="props.project?.isDownloadable"
   >
+    <div v-if="project?.description?.length > 0" class="btn-instructions" @click="displayDesc">
+      Descripción
+    </div>
+    <div v-if="project?.instructions?.length > 0" class="btn-description" @click="displayInst">
+      Instrucciones
+    </div>
     <div class="img-cont">
       <v-img
         aspect-ratio="16/9"
         :height="240"
-        cover
+        contain
         draggable="false"
         :src="`${urlBase}${currentImage}`"
         alt=""
@@ -77,6 +107,24 @@
         ><span v-else>{{ props.project.links?.download?.text?.es }}</span></a
       >
     </div>
+    <div
+      v-if="isAnexDesc"
+      class="card card-anex"
+      :class="{
+        closed: !isAnexDesc,
+        opened: isAnexDesc,
+      }"
+    >
+      Descripción
+      <br /><br />
+      {{ project?.description }}
+    </div>
+    <div v-if="isAnexInst" class="card card-anex">
+      Instrucciones
+      <br /><br />
+      {{ project?.instructions }}
+    </div>
+    <div v-if="isAnexDesc || isAnexInst" @click="closeBoth" class="btn close-btn">Cerrar</div>
   </div>
 </template>
 
@@ -84,6 +132,8 @@
 import { ref } from 'vue'
 
 const urlBase = import.meta.env.BASE_URL
+const isAnexDesc = ref(false)
+const isAnexInst = ref(false)
 
 const props = defineProps({
   project: Object,
@@ -115,10 +165,22 @@ const stopHover = () => {
     intervalid = null
   }
 }
+
+const displayDesc = () => {
+  isAnexDesc.value == true ? (isAnexDesc.value = false) : (isAnexDesc.value = true)
+}
+const displayInst = () => {
+  isAnexInst.value == true ? (isAnexInst.value = false) : (isAnexInst.value = true)
+}
+const closeBoth = () => {
+  isAnexDesc.value = false
+  isAnexInst.value = false
+}
 </script>
 
 <style scoped lang="scss">
 .card {
+  position: relative;
   width: 440px;
   min-height: 340px;
   background: rgba(200, 200, 200, 0.13);
@@ -201,6 +263,19 @@ const stopHover = () => {
     }
   }
 }
+.card-anex {
+  display: flex;
+  padding: 30px;
+}
+.dislpay-anex {
+  display: flex;
+}
+.closed {
+  opacity: 0;
+}
+.opened {
+  opacity: 1;
+}
 
 .btn {
   border: 1.5px solid rgb(54, 191, 164);
@@ -208,6 +283,7 @@ const stopHover = () => {
   color: rgb(54, 191, 164);
   text-decoration: none;
   transition: 0.4s;
+  cursor: pointer;
   &:hover {
     border: 1.5px solid rgba(54, 191, 164, 0);
     color: rgb(29, 42, 51);
@@ -215,8 +291,57 @@ const stopHover = () => {
     border-radius: 7px;
   }
 }
+.close-btn {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  margin: 10px;
+  width: 50%;
+  padding: 4px;
+  border: 1.5px solid #323e46;
+  color: #323e46;
+  &:hover {
+    border: 1.5px solid rgba(54, 191, 164, 0);
+    color: rgb(29, 42, 51);
+    background-color: #b71c1c;
+    border-radius: 7px;
+  }
+}
+
+.btn-instructions,
+.btn-description {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  right: 0;
+  width: 25%;
+  border: 1.5px solid rgb(54, 191, 164);
+  background-color: rgba(54, 191, 164, 0.5);
+  padding: 4px;
+  color: rgb(54, 191, 164);
+  text-decoration: none;
+  transition: 0.4s;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0.4;
+  &:hover {
+    border: 1.5px solid rgba(54, 191, 164, 0);
+    color: rgb(29, 42, 51);
+    background-color: rgba(54, 191, 164, 1);
+    border-radius: 7px;
+    opacity: 1;
+  }
+}
+.btn-description {
+  left: 0;
+}
 
 @media screen and (max-width: 425px) {
+  .btn-instructions,
+  .btn-description {
+    width: 45%;
+  }
   .card {
     min-height: auto;
     padding-bottom: 5px;
@@ -247,6 +372,12 @@ const stopHover = () => {
         margin-bottom: 0px;
       }
     }
+  }
+  .card-anex {
+    width: 94%;
+    display: flex;
+    padding: 14px;
+    font-size: 12px;
   }
 }
 </style>

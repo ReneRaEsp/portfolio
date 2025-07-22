@@ -76,6 +76,7 @@ const usePerfil = () => {
     { name: 'HTML', img: '/img/icons/tech/html.webp' },
     { name: 'CSS', img: '/img/icons/tech/css.webp' },
     { name: 'Javascript', img: '/img/icons/tech/javascript.webp' },
+    { name: 'Typescript', img: '/img/icons/tech/typescript.webp' },
     { name: 'PHP', img: '/img/icons/tech/php.webp' },
     { name: 'Wordpress', img: '/img/icons/tech/wordpress.png' },
     { name: 'Elementor', img: '/img/icons/tech/elementor.webp' },
@@ -92,19 +93,18 @@ const usePerfil = () => {
     { name: 'PostgreSQL', img: '/img/icons/tech/postgresql.webp' },
     { name: 'MySQL', img: '/img/icons/tech/mysql.webp' },
     { name: 'MongoDB', img: '/img/icons/tech/mongo.webp' },
-    { name: 'Figma', img: '/img/icons/tech/figma.webp' },
+    { name: 'Docker', img: '/img/icons/tech/docker.webp' },
     { name: 'Ionic', img: '/img/icons/tech/ionic.webp' },
     { name: 'Capacitor', img: '/img/icons/tech/capacitor.webp' },
   ])
 
   const secondarySkills = ref([
-    { name: 'Typescript', img: '/img/icons/tech/typescript.webp' },
     { name: 'Angular', img: '/img/icons/tech/angular.webp' },
     { name: 'JQuery', img: '/img/icons/tech/jquery.webp' },
     { name: 'React', img: '/img/icons/tech/react.webp' },
     { name: 'NextJS', img: '/img/icons/tech/next.webp' },
     { name: 'Python', img: '/img/icons/tech/python.webp' },
-    { name: 'Docker', img: '/img/icons/tech/docker.webp' },
+    { name: 'Golang', img: '/img/icons/tech/go.webp' },
   ])
 
   return {
