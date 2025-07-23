@@ -7,11 +7,7 @@
           <Card :title="'Email'" text="rdejramirez@gmail.com" link="mailto:rdejramirez@gmail.com" />
           <Card :title="$t('phone')" text="+51 912569594" link="https://wa.pe/reneraespt" />
           <Card :title="$t('location')" text="Lima, Perú" />
-          <Card
-            :title="'Telegram'"
-            :text="'https://t.me/rrteam7'"
-            :link="'https://t.me/rrteam7'"
-          />
+          <Card :title="'Telegram'" :text="'https://t.me/rrteam7'" :link="'https://t.me/rrteam7'" />
         </div>
       </div>
       <div class="right">
@@ -70,7 +66,7 @@ import MaxiCard from './../components/contact/MaxiCard.vue'
     width: 90%;
     height: 90%;
     background: rgba(44, 48, 50, 1);
-    border-radius: 42px;
+    border-radius: 7px;
     border: 1px solid rgba(202, 242, 262, 0.3);
     overflow-y: auto;
     .left {
@@ -84,7 +80,7 @@ import MaxiCard from './../components/contact/MaxiCard.vue'
       width: 50%;
       height: auto;
       background: rgba(202, 242, 262, 0);
-      border-radius: 0px 40px 40px 0px;
+      border-radius: 0px 7px 7px 0px;
       border: 1px solid rgba(202, 242, 262, 0.3);
     }
   }

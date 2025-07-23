@@ -84,7 +84,7 @@ import Card from './../components/resume/Card.vue'
     width: 90%;
     height: 90%;
     background: rgba(44, 48, 50, 1);
-    border-radius: 42px;
+    border-radius: 7px;
     border: 1px solid rgba(202, 242, 262, 0.3);
     overflow-y: auto;
     .left {
@@ -98,7 +98,7 @@ import Card from './../components/resume/Card.vue'
       width: 50%;
       height: auto;
       background: rgba(202, 242, 262, 0);
-      border-radius: 0px 40px 40px 0px;
+      border-radius: 0px 07px 07px 0px;
       border: 1px solid rgba(202, 242, 262, 0.3);
     }
   }
