@@ -52,7 +52,7 @@ preloadSleep()
   width: 90%;
   height: 100%;
   overflow-y: auto;
-  padding: 0px 60px 60px 70px;
+  padding: 0px 7px 7px 7px;
 }
 
 .portfolio::-webkit-scrollbar-track {

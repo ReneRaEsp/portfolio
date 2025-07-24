@@ -30,6 +30,7 @@ const usePortfolio = () => {
         { name: 'Vue', img: 'img/icons/tech/vue.webp' },
         { name: 'Ionic', img: 'img/icons/tech/ionic.webp' },
         { name: 'Capacitor', img: 'img/icons/tech/capacitor.webp' },
+        { name: 'Android', img: 'img/icons/tech/android.webp' },
         { name: 'Node', img: 'img/icons/tech/node.webp' },
         { name: 'Typescript', img: 'img/icons/tech/typescript.webp' },
         { name: 'Express', img: 'img/icons/tech/express.webp' },

@@ -17,7 +17,7 @@
       class="btn-instructions"
       @click="displayDesc"
     >
-      {{ $t('description') }}
+      {{ $t('description-btn') }}
     </div>
     <div
       v-if="
@@ -28,7 +28,7 @@
       class="btn-description"
       @click="displayInst"
     >
-      {{ $t('instructions') }}
+      {{ $t('instructions-btn') }}
     </div>
     <div class="img-cont">
       <v-img
@@ -66,7 +66,7 @@
         opened: isAnexDesc,
       }"
     >
-      Descripción
+      {{ $t('description-btn') }}
       <br /><br />
       {{ project?.description?.es }}
     </div>
@@ -78,7 +78,7 @@
         opened: isAnexDesc,
       }"
     >
-      Descripción
+      {{ $t('description-btn') }}
       <br /><br />
       {{ project?.description?.en }}
     </div>
@@ -90,22 +90,22 @@
         opened: isAnexDesc,
       }"
     >
-      Descripción
+      {{ $t('description-btn') }}
       <br /><br />
       {{ project?.description?.eo }}
     </div>
     <div v-if="isAnexInst && locale === 'es'" class="card card-anex">
-      Instrucciones
+      {{ $t('instructions-btn') }}
       <br /><br />
       {{ project?.instructions?.es }}
     </div>
     <div v-if="isAnexInst && locale === 'en'" class="card card-anex">
-      Instrucciones
+      {{ $t('instructions-btn') }}
       <br /><br />
       {{ project?.instructions?.en }}
     </div>
     <div v-if="isAnexInst && locale === 'eo'" class="card card-anex">
-      Instrucciones
+      {{ $t('instructions-btn') }}
       <br /><br />
       {{ project?.instructions?.eo }}
     </div>
@@ -187,7 +187,7 @@
         opened: isAnexDesc,
       }"
     >
-      {{ $t('description') }}
+      {{ $t('description-btn') }}
       <br /><br />
       {{ project?.description?.es }}
     </div>
@@ -199,7 +199,7 @@
         opened: isAnexDesc,
       }"
     >
-      {{ $t('description') }}
+      {{ $t('description-btn') }}
       <br /><br />
       {{ project?.description?.en }}
     </div>
@@ -211,22 +211,22 @@
         opened: isAnexDesc,
       }"
     >
-      {{ $t('description') }}
+      {{ $t('description-btn') }}
       <br /><br />
       {{ project?.description?.eo }}
     </div>
     <div v-if="isAnexInst && locale === 'es'" class="card card-anex">
-      {{ $t('instructions') }}
+      {{ $t('instructions-btn') }}
       <br /><br />
       {{ project?.instructions?.es }}
     </div>
     <div v-else-if="isAnexInst && locale === 'en'" class="card card-anex">
-      {{ $t('instructions') }}
+      {{ $t('instructions-btn') }}
       <br /><br />
       {{ project?.instructions?.en }}
     </div>
     <div v-else-if="isAnexInst && locale === 'eo'" class="card card-anex">
-      {{ $t('instructions') }}
+      {{ $t('instructions-btn') }}
       <br /><br />
       {{ project?.instructions?.eo }}
     </div>

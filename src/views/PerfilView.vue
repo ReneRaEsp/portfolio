@@ -318,7 +318,7 @@ preloadSleep()
       width: 100%;
       height: 50%;
       border: 1px solid rgba(252, 252, 252, 0.73);
-      border-radius: 0px 0px 40px 40px;
+      border-radius: 0px 0px 7px 7px;
       &:hover {
         background: rgba(2, 60, 60, 0.12);
         backdrop-filter: blur(10px);

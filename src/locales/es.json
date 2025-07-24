@@ -34,7 +34,7 @@
   "edu-4-text": "Curso Universidad de Javascript, Udemy Noviembre 2021",
   "aboutMe": "Sobre mí",
   "myServices": "Mis Servicios",
-  "description": "Desarrollador Web Full Stack con experiencia en frontend y backend, especializado en tecnologías como Vue.js, Laravel, Symfony y Node.js. Amplio conocimiento en diseño web, desarrollo de API RESTful y creación de aplicaciones móviles con Ionic.",
+  "description": "Desarrollador Web Full Stack con más de 4 años de experiencia creando soluciones orientadas al usuario en entornos frontend y backend. Mi especialidad es desarrollar APIs RESTful, aplicaciones web con interfaces modernas y aplicaciones móviles híbridas para empresas y negocios.Comprometido con el aprendizaje constante. Actualmente aprendiendo a programar en Go (Golang) para ampliar mi abanico de opciones y mejorar mis capacidades en arquitecturas robustas y eficientes.",
   "principalSkills": "Skills principales",
   "secondarySkills": "Skills secundarias",
   "languages": "Lenguajes",
@@ -60,7 +60,7 @@
   "card-6-text": "Desarrollo aplicaciones móviles innovadoras y personalizadas para iOS y Android, garantizando un diseño intuitivo, una navegación fluida y un rendimiento óptimo. Me enfoco en crear apps que brinden la mejor experiencia al usuario.",
   "card-7-title": "Detección y Solución de Errores",
   "card-7-text": "Analizo, identifico y soluciono errores en sitios web y aplicaciones para garantizar su correcto funcionamiento, me encargo de encontrar la causa raíz y aplicar las soluciones necesarias para que todo funcione.",
-  "description": "Descripción",
-  "instructions": "Instrucciones",
-  "close": "Cerrar"
+  "description-btn": "Descripción",
+  "instructions-btn": "Instrucciones",
+  "close-btn": "Cerrar"
 }

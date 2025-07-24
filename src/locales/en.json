@@ -34,7 +34,7 @@
   "edu-4-text": "Universidad de Javascript Course, Udemy, November 2021",
   "aboutMe": "About Me",
   "myServices": "My Services",
-  "description": "Full Stack Web Developer with over 4 years of experience building user-oriented solutions across both frontend and backend environments.                                                                                                                                                        Specialized in developing RESTful APIs, modern web applications, and hybrid mobile apps for companies and businesses. Committed to continuous learning. Currently learning Go (Golang) to expand my technology stack and enhance my skills in building robust and efficient architectures.",
+  "description": "Full-stack web developer with over four years of experience creating user-centric solutions in both front- and back-end environments. My specialty is developing RESTful APIs, web applications with modern interfaces, and hybrid mobile apps for enterprises and businesses. Committed to constant learning. Currently learning to program in Go (Golang) to expand my range of options and improve my skills in robust and efficient architectures.",
   "principalSkills": "Main Skills",
   "secondarySkills": "Secondary Skills",
   "languages": "Languages",
@@ -60,7 +60,7 @@
   "card-6-text": "I develop innovative and customized mobile applications for iOS and Android, ensuring intuitive design, smooth navigation, and optimal performance. I focus on creating apps that deliver the best user experience.",
   "card-7-title": "Error Detection and Resolution",
   "card-7-text": "I analyze, identify, and fix errors on websites and applications to ensure their proper functioning. I take care of finding the root cause and applying the necessary solutions to make everything work.",
-  "description": "Description",
-  "instructions": "Instructions",
-  "close": "Close"
+  "description-btn": "Description",
+  "instructions-btn": "Instructions",
+  "close-btn": "Close"
 }
