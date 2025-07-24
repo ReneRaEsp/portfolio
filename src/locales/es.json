@@ -59,5 +59,8 @@
   "card-6-title": "Desarrollo de Aplicaciones Móviles",
   "card-6-text": "Desarrollo aplicaciones móviles innovadoras y personalizadas para iOS y Android, garantizando un diseño intuitivo, una navegación fluida y un rendimiento óptimo. Me enfoco en crear apps que brinden la mejor experiencia al usuario.",
   "card-7-title": "Detección y Solución de Errores",
-  "card-7-text": "Analizo, identifico y soluciono errores en sitios web y aplicaciones para garantizar su correcto funcionamiento, me encargo de encontrar la causa raíz y aplicar las soluciones necesarias para que todo funcione."
+  "card-7-text": "Analizo, identifico y soluciono errores en sitios web y aplicaciones para garantizar su correcto funcionamiento, me encargo de encontrar la causa raíz y aplicar las soluciones necesarias para que todo funcione.",
+  "description": "Descripción",
+  "instructions": "Instrucciones",
+  "close": "Cerrar"
 }

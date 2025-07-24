@@ -59,5 +59,8 @@
   "card-6-title": "Mobile App Development",
   "card-6-text": "I develop innovative and customized mobile applications for iOS and Android, ensuring intuitive design, smooth navigation, and optimal performance. I focus on creating apps that deliver the best user experience.",
   "card-7-title": "Error Detection and Resolution",
-  "card-7-text": "I analyze, identify, and fix errors on websites and applications to ensure their proper functioning. I take care of finding the root cause and applying the necessary solutions to make everything work."
+  "card-7-text": "I analyze, identify, and fix errors on websites and applications to ensure their proper functioning. I take care of finding the root cause and applying the necessary solutions to make everything work.",
+  "description": "Description",
+  "instructions": "Instructions",
+  "close": "Close"
 }

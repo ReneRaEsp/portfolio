@@ -1,7 +1,11 @@
 const usePortfolio = () => {
   const projects = [
     {
-      title: 'App de gestion de citas',
+      title: {
+        es: 'App de gestion de citas',
+        en: 'Appointment management app',
+        eo: 'Rendervua administrado-app',
+      },
       links: {
         view: {
           text: {
@@ -31,14 +35,28 @@ const usePortfolio = () => {
         { name: 'Express', img: 'img/icons/tech/express.webp' },
         { name: 'MongoDB', img: 'img/icons/tech/mongo.webp' },
       ],
-      description:
-        'Prototipo de aplicación en la cual un proveedor de un servicio o más puede crear servicios profecionales, seleccionar rangos horarios y semanales disponibles y sus clientes pueden agendar citas a traves de la Aplicación web oficial',
-      instructions: '',
-      instructionsPage: '',
+      description: {
+        es: 'Prototipo de aplicación en la cual un proveedor de un servicio o más puede crear servicios profecionales, seleccionar rangos horarios y semanales disponibles y sus clientes pueden agendar citas a traves de la Aplicación web oficial.',
+        en: 'Prototype of an application where one or more service providers can create professional services, select available hourly and weekly time slots, and their clients can schedule appointments through the official web application.',
+        eo: 'Prototipo de aplikaĵo, en kiu unu aŭ pliaj servoprestantoj povas krei profesionalajn servojn, elekti disponeblajn horajn kaj semajnajn tempintervalojn, kaj iliaj klientoj povas rezervi rendevuojn tra la oficiala reta aplikaĵo.',
+      },
+      instructions: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructionsPage: {
+        es: '',
+        en: '',
+        eo: '',
+      },
     },
-
     {
-      title: 'Backoffice para gestionar mis proyectos',
+      title: {
+        es: 'Backoffice para gestionar mis proyectos',
+        en: 'Backoffice to manage my projects',
+        eo: 'Backoffice por administri miajn projektojn',
+      },
       links: {
         view: {
           text: {
@@ -68,12 +86,28 @@ const usePortfolio = () => {
         { name: 'Laravel', img: 'img/icons/tech/laravel.webp' },
         { name: 'PostgreSQL', img: 'img/icons/tech/postgresql.webp' },
       ],
-      description: '',
-      instructions: '',
-      instructionsPage: '',
+      description: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructions: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructionsPage: {
+        es: '',
+        en: '',
+        eo: '',
+      },
     },
     {
-      title: 'Carwash Fidelización Web App Consulta',
+      title: {
+        es: 'Carwash fidelización web app consulta',
+        en: 'Loyalty program web app for car washes',
+        eo: 'Konsulto pri aŭtolaveja fideleca retaplikaĵo',
+      },
       links: {
         view: {
           text: {
@@ -99,12 +133,28 @@ const usePortfolio = () => {
         { name: 'Express', img: 'img/icons/tech/express.webp' },
         { name: 'MongoDB', img: 'img/icons/tech/mongo.webp' },
       ],
-      description: '',
-      instructions: '',
-      instructionsPage: '',
+      description: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructions: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructionsPage: {
+        es: '',
+        en: '',
+        eo: '',
+      },
     },
     {
-      title: 'Carwash Fidelización App',
+      title: {
+        es: 'Carwash fidelización web app',
+        en: 'Loyalty program web app for car washes',
+        eo: 'Aŭtolaveja fideleca retaplikaĵo',
+      },
       links: {
         view: {
           text: {
@@ -124,6 +174,8 @@ const usePortfolio = () => {
         },
       },
       isDownloadable: true,
+      isActive: true,
+      isLive: true,
       images: ['/img/projects/carwash-app.webp', '/img/projects/carwash-app2.webp'],
       technologies: [
         { name: 'HTML', img: 'img/icons/tech/html.webp' },
@@ -137,12 +189,28 @@ const usePortfolio = () => {
         { name: 'Android', img: 'img/icons/tech/android.webp' },
         { name: 'Ios', img: 'img/icons/tech/ios.webp' },
       ],
-      description: '',
-      instructions: '',
-      instructionsPage: '',
+      description: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructions: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructionsPage: {
+        es: '',
+        en: '',
+        eo: '',
+      },
     },
     {
-      title: 'E-Commerce - Bombas de agua, aceite y gasolina',
+      title: {
+        es: 'E-commerce - Bombas de agua, aceite y gasolina',
+        en: 'E-commerce – Water, Oil, and Fuel Pumps',
+        eo: 'Retbutiko – Akvopumpiloj, Oleopumpiloj kaj Benzinpumpiloj',
+      },
       links: {
         view: {
           text: {
@@ -172,13 +240,28 @@ const usePortfolio = () => {
         { name: 'Woocommerce', img: 'img/icons/tech/woocommerce.webp' },
         { name: 'Elementor', img: 'img/icons/tech/elementor.webp' },
       ],
-      description: '',
-      instructions: '',
-      instructionsPage: '',
+      description: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructions: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructionsPage: {
+        es: '',
+        en: '',
+        eo: '',
+      },
     },
-
     {
-      title: 'Atletic Lleida Web',
+      title: {
+        es: 'Atletic Lleida Web',
+        en: 'Atletic Lleida Web',
+        eo: 'Atletic Lleida Web',
+      },
       links: {
         view: {
           text: {
@@ -190,6 +273,8 @@ const usePortfolio = () => {
         },
       },
       isDownloadable: false,
+      isActive: true,
+      isLive: true,
       images: [
         '/img/projects/Atleticlleida.webp',
         '/img/projects/Atleticlleida2.webp',
@@ -207,7 +292,11 @@ const usePortfolio = () => {
       ],
     },
     {
-      title: 'Athletic Lleida App',
+      title: {
+        es: 'Atletic Lleida App',
+        en: 'Atletic Lleida App',
+        eo: 'Atletic Lleida App',
+      },
       links: {
         view: {
           text: {
@@ -219,6 +308,8 @@ const usePortfolio = () => {
         },
       },
       isDownloadable: false,
+      isActive: true,
+      isLive: true,
       images: ['/img/projects/Athletic5.webp', '/img/projects/Athletic6.webp'],
       technologies: [
         { name: 'HTML', img: 'img/icons/tech/html.webp' },
@@ -233,12 +324,28 @@ const usePortfolio = () => {
         { name: 'iOS', img: 'img/icons/tech/ios.webp' },
         { name: 'Android', img: 'img/icons/tech/android.webp' },
       ],
-      description: '',
-      instructions: '',
-      instructionsPage: '',
+      description: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructions: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructionsPage: {
+        es: '',
+        en: '',
+        eo: '',
+      },
     },
     {
-      title: 'Cocina Sinfonia (Web App Hosteleria)',
+      title: {
+        es: 'Cocina Sinfonia (Web App Hosteleria)',
+        en: '"Symphony Kitchen" (keeps the musical metaphor)',
+        eo: '"Sinfonia Kuirmanaĝilo" – Reta Aplikaĵo por Gastigado',
+      },
       links: {
         view: {
           text: {
@@ -250,6 +357,8 @@ const usePortfolio = () => {
         },
       },
       isDownloadable: false,
+      isActive: true,
+      isLive: true,
       images: [
         '/img/projects/Simoft.webp',
         //'/img/projects/Hosteleria.webp',
@@ -270,7 +379,11 @@ const usePortfolio = () => {
       instructionsPage: '',
     },
     {
-      title: 'Aensa',
+      title: {
+        es: 'Aensa',
+        en: 'Aensa',
+        eo: 'Aensa',
+      },
       links: {
         view: {
           text: {
@@ -282,6 +395,8 @@ const usePortfolio = () => {
         },
       },
       isDownloadable: false,
+      isActive: true,
+      isLive: true,
       images: [
         '/img/projects/Aensa.webp',
         '/img/projects/Aensa2.webp',
@@ -295,12 +410,28 @@ const usePortfolio = () => {
         { name: 'Wordpress', img: 'img/icons/tech/wordpress.png' },
         { name: 'Elementor', img: 'img/icons/tech/elementor.webp' },
       ],
-      description: '',
-      instructions: '',
-      instructionsPage: '',
+      description: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructions: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructionsPage: {
+        es: '',
+        en: '',
+        eo: '',
+      },
     },
     {
-      title: 'El Click Artistico',
+      title: {
+        es: 'El Click Artistico',
+        en: '"El Click Artistico" (The Artistic click)',
+        eo: 'El Click Artistico',
+      },
       links: {
         view: {
           text: {
@@ -325,7 +456,11 @@ const usePortfolio = () => {
       instructionsPage: '',
     },
     {
-      title: 'Calvari Pizza',
+      title: {
+        es: 'Calvari Pizza',
+        en: 'Calvari Pizza',
+        eo: 'Calvari Pizza',
+      },
       links: {
         view: {
           text: {
@@ -337,6 +472,8 @@ const usePortfolio = () => {
         },
       },
       isDownloadable: false,
+      isActive: true,
+      isLive: true,
       images: [
         '/img/projects/CalvariPizza.webp',
         '/img/projects/CalvariPizza2.webp',
@@ -350,12 +487,28 @@ const usePortfolio = () => {
         { name: 'Wordpress', img: 'img/icons/tech/wordpress.png' },
         { name: 'Elementor', img: 'img/icons/tech/elementor.webp' },
       ],
-      description: '',
-      instructions: '',
-      instructionsPage: '',
+      description: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructions: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructionsPage: {
+        es: '',
+        en: '',
+        eo: '',
+      },
     },
     {
-      title: 'Barcelona Art Of Travel',
+      title: {
+        es: 'Barcelona Art Of Travel',
+        en: 'Barcelona Art Of Travel',
+        eo: 'Barcelona Art Of Travel',
+      },
       links: {
         view: {
           text: {
@@ -367,6 +520,8 @@ const usePortfolio = () => {
         },
       },
       isDownloadable: false,
+      isActive: true,
+      isLive: true,
       images: [
         '/img/projects/BarcelonaArtOfTravel.webp',
         '/img/projects/barcelonaartoftravel2.webp',
@@ -380,9 +535,21 @@ const usePortfolio = () => {
         { name: 'Wordpress', img: 'img/icons/tech/wordpress.png' },
         { name: 'Elementor', img: 'img/icons/tech/elementor.webp' },
       ],
-      description: '',
-      instructions: '',
-      instructionsPage: '',
+      description: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructions: {
+        es: '',
+        en: '',
+        eo: '',
+      },
+      instructionsPage: {
+        es: '',
+        en: '',
+        eo: '',
+      },
     },
   ]
 

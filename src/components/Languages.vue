@@ -26,6 +26,7 @@ const changeLocale = (newLocale) => {
   height: 110px;
   right: 230px;
   border-radius: 0 0 10px 10px;
+  z-index: 22;
   .lang {
     display: flex;
     justify-content: center;

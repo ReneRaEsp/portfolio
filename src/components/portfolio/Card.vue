@@ -8,11 +8,27 @@
     class="card"
     v-if="!props.project.isDownloadable"
   >
-    <div v-if="project?.description?.length > 0" class="btn-instructions" @click="displayDesc">
-      Descripción
+    <div
+      v-if="
+        project?.description?.es?.length > 0 ||
+        project?.description?.en?.length > 0 ||
+        project?.description?.eo?.length > 0
+      "
+      class="btn-instructions"
+      @click="displayDesc"
+    >
+      {{ $t('description') }}
     </div>
-    <div v-if="project?.instructions?.length > 0" class="btn-description" @click="displayInst">
-      Instrucciones
+    <div
+      v-if="
+        project?.instructions?.es?.length > 0 ||
+        project?.instructions?.en?.length > 0 ||
+        project?.instructions?.eo?.length > 0
+      "
+      class="btn-description"
+      @click="displayInst"
+    >
+      {{ $t('instructions') }}
     </div>
     <div class="img-cont">
       <v-img
@@ -25,7 +41,9 @@
       ></v-img>
     </div>
     <div class="data-cont">
-      <h2>{{ props.project?.title }}</h2>
+      <h2 v-if="locale === 'es'">{{ props.project?.title?.es }}</h2>
+      <h2 v-else-if="locale === 'en'">{{ props.project?.title?.en }}</h2>
+      <h2 v-else-if="locale === 'eo'">{{ props.project?.title?.eo }}</h2>
     </div>
     <div class="stack-cont">
       <div v-for="tech of props.project?.technologies" :key="tech.name" class="tech">
@@ -41,7 +59,7 @@
       >
     </div>
     <div
-      v-if="isAnexDesc && project?.description?.length > 0"
+      v-if="isAnexDesc && locale === 'es'"
       class="card card-anex"
       :class="{
         closed: !isAnexDesc,
@@ -50,14 +68,50 @@
     >
       Descripción
       <br /><br />
-      {{ project?.description }}
+      {{ project?.description?.es }}
     </div>
-    <div v-if="isAnexInst && project?.instructions?.length > 0" class="card card-anex">
+    <div
+      v-else-if="isAnexDesc && locale === 'en'"
+      class="card card-anex"
+      :class="{
+        closed: !isAnexDesc,
+        opened: isAnexDesc,
+      }"
+    >
+      Descripción
+      <br /><br />
+      {{ project?.description?.en }}
+    </div>
+    <div
+      v-else-if="isAnexDesc && locale === 'eo'"
+      class="card card-anex"
+      :class="{
+        closed: !isAnexDesc,
+        opened: isAnexDesc,
+      }"
+    >
+      Descripción
+      <br /><br />
+      {{ project?.description?.eo }}
+    </div>
+    <div v-if="isAnexInst && locale === 'es'" class="card card-anex">
       Instrucciones
       <br /><br />
-      {{ project?.instructions }}
+      {{ project?.instructions?.es }}
     </div>
-    <div v-if="isAnexDesc || isAnexInst" @click="closeBoth" class="btn close-btn">Cerrar</div>
+    <div v-if="isAnexInst && locale === 'en'" class="card card-anex">
+      Instrucciones
+      <br /><br />
+      {{ project?.instructions?.en }}
+    </div>
+    <div v-if="isAnexInst && locale === 'eo'" class="card card-anex">
+      Instrucciones
+      <br /><br />
+      {{ project?.instructions?.eo }}
+    </div>
+    <div v-if="isAnexDesc || isAnexInst" @click="closeBoth" class="btn close-btn">
+      {{ $t('close') }}
+    </div>
   </div>
 
   <div
@@ -69,11 +123,27 @@
     class="card"
     v-else-if="props.project?.isDownloadable"
   >
-    <div v-if="project?.description?.length > 0" class="btn-instructions" @click="displayDesc">
-      Descripción
+    <div
+      v-if="
+        project?.description?.es?.length > 0 ||
+        project?.description?.en?.length > 0 ||
+        project?.description?.eo?.length > 0
+      "
+      class="btn-instructions"
+      @click="displayDesc"
+    >
+      {{ $t('description') }}
     </div>
-    <div v-if="project?.instructions?.length > 0" class="btn-description" @click="displayInst">
-      Instrucciones
+    <div
+      v-if="
+        project?.instructions?.es?.length > 0 ||
+        project?.instructions?.en?.length > 0 ||
+        project?.instructions?.eo?.length > 0
+      "
+      class="btn-description"
+      @click="displayInst"
+    >
+      {{ $t('instructions') }}
     </div>
     <div class="img-cont">
       <v-img
@@ -87,7 +157,9 @@
       ></v-img>
     </div>
     <div class="data-cont">
-      <h2>{{ props?.project?.title }}</h2>
+      <h2 v-if="locale === 'es'">{{ props?.project?.title?.es }}</h2>
+      <h2 v-else-if="locale === 'en'">{{ props?.project?.title?.en }}</h2>
+      <h2 v-else-if="locale === 'eo'">{{ props?.project?.title?.eo }}</h2>
     </div>
     <div class="stack-cont">
       <div v-for="tech of props.project?.technologies" :key="tech.name" class="tech">
@@ -108,43 +180,84 @@
       >
     </div>
     <div
-      v-if="isAnexDesc"
+      v-if="isAnexDesc && locale === 'es'"
       class="card card-anex"
       :class="{
         closed: !isAnexDesc,
         opened: isAnexDesc,
       }"
     >
-      Descripción
+      {{ $t('description') }}
       <br /><br />
-      {{ project?.description }}
+      {{ project?.description?.es }}
     </div>
-    <div v-if="isAnexInst" class="card card-anex">
-      Instrucciones
+    <div
+      v-else-if="isAnexDesc && locale === 'en'"
+      class="card card-anex"
+      :class="{
+        closed: !isAnexDesc,
+        opened: isAnexDesc,
+      }"
+    >
+      {{ $t('description') }}
       <br /><br />
-      {{ project?.instructions }}
+      {{ project?.description?.en }}
     </div>
-    <div v-if="isAnexDesc || isAnexInst" @click="closeBoth" class="btn close-btn">Cerrar</div>
+    <div
+      v-else-if="isAnexDesc && locale === 'eo'"
+      class="card card-anex"
+      :class="{
+        closed: !isAnexDesc,
+        opened: isAnexDesc,
+      }"
+    >
+      {{ $t('description') }}
+      <br /><br />
+      {{ project?.description?.eo }}
+    </div>
+    <div v-if="isAnexInst && locale === 'es'" class="card card-anex">
+      {{ $t('instructions') }}
+      <br /><br />
+      {{ project?.instructions?.es }}
+    </div>
+    <div v-else-if="isAnexInst && locale === 'en'" class="card card-anex">
+      {{ $t('instructions') }}
+      <br /><br />
+      {{ project?.instructions?.en }}
+    </div>
+    <div v-else-if="isAnexInst && locale === 'eo'" class="card card-anex">
+      {{ $t('instructions') }}
+      <br /><br />
+      {{ project?.instructions?.eo }}
+    </div>
+
+    <div v-if="isAnexDesc || isAnexInst" @click="closeBoth" class="btn close-btn">
+      {{ $t('close') }}
+    </div>
   </div>
 </template>
 
 <script setup>
+//NPM
 import { ref } from 'vue'
-
+import { useI18n } from 'vue-i18n'
+//Data
 const urlBase = import.meta.env.BASE_URL
 const isAnexDesc = ref(false)
 const isAnexInst = ref(false)
-
+//Props
 const props = defineProps({
   project: Object,
 })
+
+const { locale } = useI18n()
 
 const imagesArr = ref(props.project.images)
 const currentImage = ref(props.project.images[0])
 const times = ref(0)
 
 let intervalid = null
-
+//Functions
 const onHover = () => {
   const changeImage = () => {
     if (times.value < imagesArr.value.length - 1) {
@@ -165,7 +278,6 @@ const stopHover = () => {
     intervalid = null
   }
 }
-
 const displayDesc = () => {
   isAnexDesc.value == true ? (isAnexDesc.value = false) : (isAnexDesc.value = true)
 }

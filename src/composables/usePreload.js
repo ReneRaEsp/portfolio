@@ -3,6 +3,7 @@ const usePreload = () => {
     'https://renegade.alwaysdata.net',
     'https://carwash-fidelidad-back.onrender.com/',
     'https://portfoliobackoffice.netlify.app/',
+    'https://jitime-api.onrender.com/',
   ]
 
   const preloadSleep = async () => {
