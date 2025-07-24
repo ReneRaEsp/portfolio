@@ -36,7 +36,7 @@
         :height="240"
         contain
         draggable="false"
-        :src="`${urlBase}${currentImage}`"
+        :src="currentImage"
         :alt="`${props.project?.title}`"
       ></v-img>
     </div>
@@ -47,7 +47,7 @@
     </div>
     <div class="stack-cont">
       <div v-for="tech of props.project?.technologies" :key="tech.name" class="tech">
-        <img :src="tech.img" alt="" />
+        <img :src="tech.img" :alt="tech.name" />
         <v-tooltip activator="parent" location="top"> {{ tech.name }} </v-tooltip>
       </div>
     </div>
@@ -151,7 +151,7 @@
         :height="240"
         contain
         draggable="false"
-        :src="`${urlBase}${currentImage}`"
+        :src="currentImage"
         alt=""
         src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
       ></v-img>
@@ -163,7 +163,7 @@
     </div>
     <div class="stack-cont">
       <div v-for="tech of props.project?.technologies" :key="tech.name" class="tech">
-        <img :src="tech.img" alt="" />
+        <img :src="tech.img" :alt="tech.name" />
         <v-tooltip activator="parent" location="top"> {{ tech.name }} </v-tooltip>
       </div>
     </div>

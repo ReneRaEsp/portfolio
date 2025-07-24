@@ -96,15 +96,17 @@ const usePerfil = () => {
     { name: 'Docker', img: '/img/icons/tech/docker.webp' },
     { name: 'Ionic', img: '/img/icons/tech/ionic.webp' },
     { name: 'Capacitor', img: '/img/icons/tech/capacitor.webp' },
+    { name: 'Android', img: '/img/icons/tech/android.webp' },
+    { name: 'Python', img: '/img/icons/tech/python.webp' },
+    { name: 'Fast Api', img: '/img/icons/tech/fastapi.webp' },
   ])
 
   const secondarySkills = ref([
-    { name: 'Angular', img: '/img/icons/tech/angular.webp' },
-    { name: 'JQuery', img: '/img/icons/tech/jquery.webp' },
+    { name: 'Golang', img: '/img/icons/tech/go.webp' },
     { name: 'React', img: '/img/icons/tech/react.webp' },
     { name: 'NextJS', img: '/img/icons/tech/next.webp' },
-    { name: 'Python', img: '/img/icons/tech/python.webp' },
-    { name: 'Golang', img: '/img/icons/tech/go.webp' },
+    { name: 'Angular', img: '/img/icons/tech/angular.webp' },
+    { name: 'JQuery', img: '/img/icons/tech/jquery.webp' },
   ])
 
   return {

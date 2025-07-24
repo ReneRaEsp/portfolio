@@ -23,7 +23,7 @@
             </div>
 
             <div v-for="(skill, index) of principalSkills" :key="index" class="tech">
-              <img draggable="false" :src="`${urlBase}${skill.img}`" :alt="skill.name" />
+              <img draggable="false" :src="skill.img" :alt="skill.name" />
               <v-tooltip activator="parent" location="top"> {{ skill.name }} </v-tooltip>
             </div>
           </div>
@@ -40,7 +40,7 @@
                   class="ver"
                 >
                   {{ $t('view') }}
-                  <img draggable="false" src="/img/icons/view.svg" alt="" />
+                  <img draggable="false" src="/img/icons/view.svg" alt="View EFSet Certificate" />
                 </a>
                 <a
                   href="https://certificates-eu-west-1.efset.org/v2/certificates/CgECYy/pdf?locale=en"
@@ -49,7 +49,11 @@
                   draggable="false"
                 >
                   {{ $t('download') }}
-                  <img draggable="false" src="/img/icons/download.svg" alt="" />
+                  <img
+                    draggable="false"
+                    src="/img/icons/download.svg"
+                    alt="Download EFSet Certificate"
+                  />
                 </a>
               </div>
               <div class="top-right">
@@ -68,7 +72,7 @@
               </div>
 
               <div v-for="(skill, index) of secondarySkills" :key="index" class="tech">
-                <img draggable="false" :src="`${urlBase}${skill.img}`" :alt="skill.name" />
+                <img draggable="false" :src="skill.img" :alt="skill.name" />
                 <v-tooltip activator="parent" location="top"> {{ skill.name }} </v-tooltip>
               </div>
             </div>
@@ -127,10 +131,11 @@ preloadSleep()
   align-items: center;
   align-content: center;
   width: 50px;
-  height: 70px;
+  height: 50px;
   cursor: pointer;
+  padding-top: 17px;
   img {
-    width: 30px;
+    width: 35px;
     transition: 0.8s;
     &:hover {
       transform: scale(2);
@@ -257,10 +262,10 @@ preloadSleep()
                 align-items: center;
                 flex-direction: row;
                 width: 100%;
-                height: 54px;
+                height: 44px;
                 color: rgba(252, 252, 252, 0.73);
-                font-size: 14px;
-                padding: 15px;
+                font-size: 12.7px;
+                padding: 15px 20px;
               }
               .descargar {
                 display: flex;
@@ -270,8 +275,8 @@ preloadSleep()
                 width: 100%;
                 height: 54px;
                 color: rgba(252, 252, 252, 0.73);
-                font-size: 14px;
-                padding: 15px;
+                font-size: 12.7px;
+                padding: 15px 20px;
               }
               img {
                 width: 30px;
@@ -282,10 +287,11 @@ preloadSleep()
               display: flex;
               width: 65%;
               height: 100%;
-              padding: 20px;
+              padding: 15px;
               p {
                 color: rgba(252, 252, 252, 0.73);
-                font-size: 15px;
+                font-size: 13.4px;
+                padding-left: 7px;
               }
             }
           }
