@@ -3,8 +3,6 @@
     @mouseenter="onHover"
     @mouseleave="stopHover"
     draggable="false"
-    :href="props.project.links?.url"
-    target="_blank"
     class="card"
     v-if="!props.project.isDownloadable"
   >
@@ -52,7 +50,11 @@
       </div>
     </div>
     <div class="buttons-cont-solo">
-      <a class="btn" :href="props.project?.links?.view?.url" target="_blank"
+      <a
+        class="btn"
+        :href="props.project?.links?.view?.url"
+        target="_blank"
+        rel="noreferrer noopener"
         ><span v-if="$i18n.locale === 'en'">{{ props.project.links?.view?.text?.en }}</span
         ><span v-else-if="$i18n.locale === 'eo'">{{ props.project.links?.view?.text?.eo }}</span
         ><span v-else>{{ props.project.links?.view?.text?.es }}</span></a
@@ -152,8 +154,7 @@
         contain
         draggable="false"
         :src="currentImage"
-        alt=""
-        src="https://cdn.vuetifyjs.com/images/parallax/material.jpg"
+        :alt="props?.project?.title?.es"
       ></v-img>
     </div>
     <div class="data-cont">
@@ -168,12 +169,20 @@
       </div>
     </div>
     <div class="buttons-cont">
-      <a class="btn" :href="props.project?.links?.view?.url" target="_blank"
+      <a
+        class="btn"
+        :href="props.project?.links?.view?.url"
+        target="_blank"
+        rel="noreferrer noopener"
         ><span v-if="$i18n.locale === 'en'">{{ props.project.links?.view?.text?.en }}</span
         ><span v-else-if="$i18n.locale === 'eo'">{{ props.project.links?.view?.text?.eo }}</span
         ><span v-else>{{ props.project.links?.view?.text?.es }}</span></a
       >
-      <a class="btn" :href="props.project?.links?.download?.url" target="_blank"
+      <a
+        class="btn"
+        :href="props.project?.links?.download?.url"
+        target="_blank"
+        rel="noreferrer noopener"
         ><span v-if="$i18n.locale === 'en'">{{ props.project.links?.download?.text?.en }}</span
         ><span v-else-if="$i18n.locale === 'eo'">{{ props.project.links?.download?.text?.eo }}</span
         ><span v-else>{{ props.project.links?.download?.text?.es }}</span></a
@@ -242,7 +251,6 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 //Data
-const urlBase = import.meta.env.BASE_URL
 const isAnexDesc = ref(false)
 const isAnexInst = ref(false)
 //Props
