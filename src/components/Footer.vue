@@ -14,7 +14,7 @@
         <v-tooltip activator="parent" location="top"> {{ $t('portfolio') }} </v-tooltip>
       </RouterLink>
       <RouterLink to="/contact" class="item" draggable="false">
-        <img class="icon" src="/img/icons/contact.png" draggable="false" />
+        <img class="icon" src="/img/icons/contact.webp" draggable="false" />
         <v-tooltip activator="parent" location="top"> {{ $t('contact') }} </v-tooltip>
       </RouterLink>
       <a href="https://gitlab.com/reneraespteam" target="_blank" class="item">

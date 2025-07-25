@@ -22,7 +22,7 @@
       >
       <router-link to="/contact">
         <div class="item" @click="toggleShowMenu">
-          <img src="/img/icons/contact.png" alt="" /> {{ $t('contact') }}
+          <img src="/img/icons/contact.webp" alt="" /> {{ $t('contact') }}
         </div></router-link
       >
       <hr />
