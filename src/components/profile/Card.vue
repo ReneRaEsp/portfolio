@@ -2,11 +2,9 @@
   <div class="card">
     <div class="header">
       <div class="img-cont">
-        <img draggable="false" :src="`${urlBase}${image}`" alt="" />
+        <img draggable="false" :src="image" :alt="title" />
       </div>
-      <div class="title-cont">
-        {{ title }}
-      </div>
+      <div class="title-cont">{{ title }}</div>
     </div>
     <div class="body-card">
       {{ text }}
@@ -17,10 +15,10 @@
       </div>
       <div class="links">
         <a draggable="false" :href="links[0]" class="whatsapp-btn">
-          <img draggable="false" src="/img/icons/whatsapp.webp" alt="" />
+          <img draggable="false" src="/img/icons/whatsapp.webp" alt="Whatsapp icon" />
         </a>
         <a draggable="false" :href="links[1]" class="email-btn">
-          <img draggable="false" src="/img/icons/contact.webp" alt="" />
+          <img draggable="false" src="/img/icons/contact.webp" alt="Email icon" />
         </a>
       </div>
     </div>
@@ -28,9 +26,6 @@
 </template>
 
 <script setup>
-import { ref, defineProps } from 'vue'
-const urlBase = ref(import.meta.env.BASE_URL)
-
 const props = defineProps({
   title: String,
   text: String,
@@ -44,11 +39,11 @@ const props = defineProps({
   box-sizing: border-box;
   display: flex;
   width: 440px;
-  height: 80%;
+  height: 90%;
   flex-direction: column;
   border-radius: 10px;
   flex-shrink: 0;
-  margin: 10px;
+  margin: 0px 10px;
   .header {
     width: 100%;
     display: flex;
