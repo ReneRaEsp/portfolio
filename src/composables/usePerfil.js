@@ -10,7 +10,7 @@ const usePerfil = () => {
     {
       title: `${t('card-1-title')}`,
       text: `${t('card-1-text')}`,
-      image: '/img/web.webp',
+      image: '/misc/web.webp',
       links: [
         `https://wa.me/${currentPhone.value}?text=Hola René, Me gustaría conocer más sobre tu servicio de diseño y desarrollo web`,
         `mailto:${currentEmail.value}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20diseño%20y%20desarrollo%20web%20`,
@@ -19,7 +19,7 @@ const usePerfil = () => {
     {
       title: `${t('card-2-title')}`,
       text: `${t('card-2-text')}`,
-      image: '/img/app-development.webp',
+      image: '/misc/app-development.webp',
       links: [
         `https://wa.me/${currentPhone.value}?text=Hola René, Me gustaría conocer más sobre tu servicio de desarrollo de aplicaciones web`,
         `mailto:${currentEmail.value}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20desarrollo%20de%20aplicaciones%20web%20`,
@@ -28,7 +28,7 @@ const usePerfil = () => {
     {
       title: `${t('card-3-title')}`,
       text: `${t('card-3-text')}`,
-      image: '/img/seo.webp',
+      image: '/misc/seo.webp',
       links: [
         `https://wa.me/${currentPhone.value}?text=Hola René, Me gustaría conocer más sobre tu servicio de optimización SEO`,
         `mailto:${currentEmail.value}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20optimización%20SEO%20`,
@@ -37,7 +37,7 @@ const usePerfil = () => {
     {
       title: `${t('card-4-title')}`,
       text: `${t('card-4-text')}`,
-      image: '/img/scraping.webp',
+      image: '/misc/scraping.webp',
       links: [
         `https://wa.me/${currentPhone.value}?text=Hola René, Me gustaría conocer más sobre tu servicio de web scraping`,
         `mailto:${currentEmail.value}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20web%20scraping%20`,
@@ -46,7 +46,7 @@ const usePerfil = () => {
     {
       title: `${t('card-5-title')}`,
       text: `${t('card-5-text')}`,
-      image: '/img/api.webp',
+      image: '/misc/api.webp',
       links: [
         `https://wa.me/${currentPhone.value}?text=Hola René, Me gustaría conocer más sobre tu servicio de desarrollo de APIs`,
         `mailto:${currentEmail.value}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20desarrollo%20de%20APIs%20`,
@@ -55,7 +55,7 @@ const usePerfil = () => {
     {
       title: `${t('card-6-title')}`,
       text: `${t('card-6-text')}`,
-      image: '/img/development.webp',
+      image: '/misc/development.webp',
       links: [
         `https://wa.me/${currentPhone.value}?text=Hola René, Me gustaría conocer más sobre tu servicio de desarrollo de aplicaciones móviles`,
         `mailto:${currentEmail.value}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20desarrollo%20de%20aplicaciones%20móviles%20`,
@@ -64,7 +64,7 @@ const usePerfil = () => {
     {
       title: `${t('card-7-title')}`,
       text: `${t('card-7-text')}`,
-      image: '/img/debugging.webp',
+      image: '/misc/debugging.webp',
       links: [
         `https://wa.me/${currentPhone.value}?text=Hola René, Me gustaría conocer más sobre tu servicio de detección y solución de errores`,
         `mailto:${currentEmail.value}?subject=Consulta%20desde%20portafolio%20web&body=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20el%20servicio%20de%20detección%20y%20solución%20de%20errores%20`,

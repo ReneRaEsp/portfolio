@@ -2,7 +2,7 @@
   <div class="card">
     <div class="header">
       <div class="img-cont">
-        <img draggable="false" :src="image" :alt="title" />
+        <img draggable="false" :src="`${STORAGE_URL}${image}`" :alt="title" />
       </div>
       <div class="title-cont">{{ title }}</div>
     </div>
@@ -26,6 +26,8 @@
 </template>
 
 <script setup>
+const STORAGE_URL = import.meta.env.VITE_STORAGE_URL
+
 const props = defineProps({
   title: String,
   text: String,
