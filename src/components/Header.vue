@@ -6,18 +6,14 @@
         class="menu-icon"
         src="/img/icons/logo.svg"
         draggable="false"
-        alt=""
+        alt="Toggle Menu"
       />
     </div>
     <div class="menu-indicator-cont">
       <img
         class="menu-icon"
         draggable="false"
-        :src="
-          route.fullPath === '/'
-            ? `${urlBase}/img/icons/perfil.png`
-            : `${urlBase}/img/icons${route.fullPath}.png`
-        "
+        :src="route.fullPath === '/' ? `/img/icons/perfil.png` : `/img/icons${route.fullPath}.png`"
         alt=""
       />
       <div class="menu-indicator" v-if="route?.fullPath === '/'">{{ $t('profile') }}</div>

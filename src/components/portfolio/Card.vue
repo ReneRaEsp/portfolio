@@ -51,6 +51,7 @@
     </div>
     <div class="buttons-cont-solo">
       <a
+        v-if="props.project?.isActive"
         class="btn"
         :href="props.project?.links?.view?.url"
         target="_blank"
@@ -58,6 +59,9 @@
         ><span v-if="$i18n.locale === 'en'">{{ props.project.links?.view?.text?.en }}</span
         ><span v-else-if="$i18n.locale === 'eo'">{{ props.project.links?.view?.text?.eo }}</span
         ><span v-else>{{ props.project.links?.view?.text?.es }}</span></a
+      >
+      <span v-else-if="!props.project?.isActive" class="btn maintaining"
+        ><span> {{ $t('maintaining') }} </span></span
       >
     </div>
     <div
@@ -134,7 +138,7 @@
       class="btn-instructions"
       @click="displayDesc"
     >
-      {{ $t('description') }}
+      {{ $t('description-btn') }}
     </div>
     <div
       v-if="
@@ -145,7 +149,7 @@
       class="btn-description"
       @click="displayInst"
     >
-      {{ $t('instructions') }}
+      {{ $t('instructions-btn') }}
     </div>
     <div class="img-cont">
       <v-img
@@ -179,6 +183,7 @@
         ><span v-else>{{ props.project.links?.view?.text?.es }}</span></a
       >
       <a
+        v-if="props.project?.isActive"
         class="btn"
         :href="props.project?.links?.download?.url"
         target="_blank"
@@ -186,6 +191,9 @@
         ><span v-if="$i18n.locale === 'en'">{{ props.project.links?.download?.text?.en }}</span
         ><span v-else-if="$i18n.locale === 'eo'">{{ props.project.links?.download?.text?.eo }}</span
         ><span v-else>{{ props.project.links?.download?.text?.es }}</span></a
+      >
+      <span v-else-if="!props.project?.isActive" class="btn maintaining"
+        ><span> {{ $t('maintaining') }} </span></span
       >
     </div>
     <div
@@ -411,6 +419,18 @@ const closeBoth = () => {
     border-radius: 7px;
   }
 }
+
+.maintaining {
+  border: 1.5px solid #8d8940;
+  color: #8d8940;
+  &:hover {
+    border: 1.5px solid transparent;
+    color: #1c2932;
+    background-color: rgba(140, 136, 63, 0.3);
+    border-radius: 7px;
+  }
+}
+
 .close-btn {
   display: flex;
   justify-content: center;
