@@ -21,10 +21,11 @@
             <div class="chip">
               <p>{{ $t('principalSkills') }}</p>
             </div>
-
             <div v-for="(skill, index) of principalSkills" :key="index" class="tech">
-              <img draggable="false" :src="skill.img" :alt="skill.name" />
-              <v-tooltip activator="parent" location="top"> {{ skill.name }} </v-tooltip>
+              <img draggable="false" :src="`${STORAGE_URL}${skill.img}`" :alt="skill.name" />
+              <v-tooltip activator="parent" location="top">
+                {{ skill.name }}
+              </v-tooltip>
             </div>
           </div>
           <div class="languages-cont">
@@ -72,7 +73,7 @@
               </div>
 
               <div v-for="(skill, index) of secondarySkills" :key="index" class="tech">
-                <img draggable="false" :src="skill.img" :alt="skill.name" />
+                <img draggable="false" :src="`${STORAGE_URL}${skill.img}`" :alt="skill.name" />
                 <v-tooltip activator="parent" location="top"> {{ skill.name }} </v-tooltip>
               </div>
             </div>
@@ -99,10 +100,14 @@ import Card from './../components/profile/Card.vue'
 import usePerfil from './../composables/usePerfil.js'
 import usePreload from '@/composables/usePreload'
 
+const STORAGE_URL = import.meta.env.VITE_STORAGE_URL
+
 const { principalSkills, secondarySkills, cardsData } = usePerfil()
 const { preloadSleep } = usePreload()
 
 preloadSleep()
+
+console.log(STORAGE_URL, principalSkills[0]?.name)
 </script>
 
 <style lang="scss" scoped>

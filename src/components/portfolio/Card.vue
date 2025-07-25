@@ -34,7 +34,7 @@
         :height="240"
         contain
         draggable="false"
-        :src="currentImage"
+        :src="`${STORAGE_URL}${currentImage}`"
         :alt="`${props.project?.title}`"
       ></v-img>
     </div>
@@ -45,7 +45,7 @@
     </div>
     <div class="stack-cont">
       <div v-for="tech of props.project?.technologies" :key="tech.name" class="tech">
-        <img :src="tech.img" :alt="tech.name" />
+        <img :src="`${STORAGE_URL}${tech.img}`" :alt="tech.name" />
         <v-tooltip activator="parent" location="top"> {{ tech.name }} </v-tooltip>
       </div>
     </div>
@@ -157,7 +157,7 @@
         :height="240"
         contain
         draggable="false"
-        :src="currentImage"
+        :src="`${STORAGE_URL}${currentImage}`"
         :alt="props?.project?.title?.es"
       ></v-img>
     </div>
@@ -168,7 +168,7 @@
     </div>
     <div class="stack-cont">
       <div v-for="tech of props.project?.technologies" :key="tech.name" class="tech">
-        <img :src="tech.img" :alt="tech.name" />
+        <img :src="`${STORAGE_URL}${tech.img}`" :alt="tech.name" />
         <v-tooltip activator="parent" location="top"> {{ tech.name }} </v-tooltip>
       </div>
     </div>
@@ -261,6 +261,8 @@ import { useI18n } from 'vue-i18n'
 //Data
 const isAnexDesc = ref(false)
 const isAnexInst = ref(false)
+
+const STORAGE_URL = import.meta.env.VITE_STORAGE_URL
 //Props
 const props = defineProps({
   project: Object,
