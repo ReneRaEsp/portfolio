@@ -35,7 +35,7 @@
         contain
         draggable="false"
         :src="`${STORAGE_URL}${currentImage}`"
-        :alt="`${props.project?.title}`"
+        :alt="`${props.project?.title?.es}`"
       ></v-img>
     </div>
     <div class="data-cont">

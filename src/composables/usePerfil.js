@@ -77,6 +77,8 @@ const usePerfil = () => {
     { name: 'CSS', img: '/icons/css.webp' },
     { name: 'Javascript', img: '/icons/javascript.webp' },
     { name: 'Typescript', img: '/icons/typescript.webp' },
+    { name: 'React', img: '/icons/react.webp' },
+    { name: 'NextJS', img: '/icons/next.webp' },
     { name: 'PHP', img: '/icons/php.webp' },
     { name: 'Wordpress', img: '/icons/wordpress.webp' },
     { name: 'Elementor', img: '/icons/elementor.webp' },
@@ -96,17 +98,16 @@ const usePerfil = () => {
     { name: 'Docker', img: '/icons/docker.webp' },
     { name: 'Ionic', img: '/icons/ionic.webp' },
     { name: 'Capacitor', img: '/icons/capacitor.webp' },
-    { name: 'Android', img: '/icons/android.webp' },
     { name: 'Python', img: '/icons/python.webp' },
     { name: 'Fast Api', img: '/icons/fastapi.webp' },
   ])
 
   const secondarySkills = ref([
     { name: 'Golang', img: '/icons/go.webp' },
-    { name: 'React', img: '/icons/react.webp' },
-    { name: 'NextJS', img: '/icons/next.webp' },
     { name: 'Angular', img: '/icons/angular.webp' },
     { name: 'JQuery', img: '/icons/jquery.webp' },
+    { name: 'Android', img: '/icons/android.webp' },
+    { name: 'Ios', img: '/icons/ios.webp' },
   ])
 
   return {
