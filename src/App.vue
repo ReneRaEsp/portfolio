@@ -29,4 +29,9 @@ import Footer from './components/Footer.vue'
     height: 85vh;
   }
 }
+@media screen and (max-width: 400px) {
+  .app-cont {
+    padding-top: 0;
+  }
+}
 </style>

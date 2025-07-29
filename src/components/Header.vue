@@ -283,6 +283,8 @@ const toggleShowLang = () =>
 }
 @media screen and (max-width: 400px) {
   .header {
+    width: 100%;
+    border-radius: 0;
     .menu-toolbar-cont {
       .date-cont {
         p {

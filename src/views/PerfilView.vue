@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <div class="contact-glass">
-      <div class="header">{{ $t('aboutMe') }}</div>
+      <div class="aboutMe">{{ $t('aboutMe') }}</div>
       <div class="body">
         <div class="left">
           <div class="img-cont">
@@ -159,7 +159,7 @@ console.log(STORAGE_URL, principalSkills[0]?.name)
     overflow-y: auto;
     overflow-x: hidden;
     border: 1px solid rgba(222, 222, 222, 0.47);
-    .header {
+    .aboutMe {
       color: rgba(202, 242, 262, 0.7);
       height: 7%;
       padding: 10px 30px;
@@ -379,9 +379,9 @@ console.log(STORAGE_URL, principalSkills[0]?.name)
     border-radius: 0px;
     .contact-glass {
       border-radius: 0px;
-      .header {
+      .aboutMe {
         border-radius: 0;
-        padding: 0 10px;
+        padding: 5px 10px;
       }
       .body {
         display: flex;
@@ -466,6 +466,11 @@ console.log(STORAGE_URL, principalSkills[0]?.name)
           .img-cont {
             width: 100%;
             height: auto;
+            @media screen and (max-width: 400px) {
+              .app-cont {
+                padding-top: 0;
+              }
+            }
             padding-top: 10px;
             img {
               width: 60%;
