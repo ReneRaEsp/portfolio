@@ -1,6 +1,6 @@
 <template>
   <div class="copy-cont">
-    <img @click="copyText(textToCopy)" class="copy-image" src="/img/icons/copy.png" />
+    <img @click="copyText(textToCopy)" class="copy-image" :src="`${STORAGE_URL}/utils/copy.webp`" />
     <p v-if="isCopied" class="copy-text">Copiado!</p>
   </div>
 </template>
@@ -12,8 +12,10 @@ const props = defineProps({
   textToCopy: String,
 })
 
-const textCopied = ref('')
+//const textCopied = ref('')
 const isCopied = ref(false)
+
+const STORAGE_URL = import.meta.env.VITE_STORAGE_URL
 
 const copyText = async (text) => {
   try {

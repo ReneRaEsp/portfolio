@@ -6,7 +6,7 @@
     <div class="text" :class="{ 'text-with-image': image, 'text-complete': !image }">
       <a class="link" :href="link" target="_blank"> {{ text }} </a>
     </div>
-    <div v-if="image" class="img"><img draggable="false" :src="image" alt="" /></div>
+    <div v-if="image" class="img"><img draggable="false" :src="image" alt="copy icon" /></div>
     <div v-else-if="link" class="copy-cont">
       <Copy :textToCopy="text" />
     </div>
@@ -23,9 +23,10 @@ import Copy from './../Copy.vue'
 const props = defineProps({
   title: String,
   text: String,
-  image: String,
   link: String,
 })
+const STORAGE_URL = import.meta.env.VITE_STORAGE_URL
+const image = `${STORAGE_URL}/utils/copy.webp`
 </script>
 
 <style scoped lang="scss">
@@ -47,12 +48,15 @@ const props = defineProps({
   .text {
     height: 100%;
     color: #71e8d2;
-    padding: 5px;
+    padding: 5px 10px;
   }
   .img {
-    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
     img {
-      width: 100%;
+      width: 15px;
+      height: 16px;
     }
   }
   .link {

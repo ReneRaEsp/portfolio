@@ -15,10 +15,10 @@
       </div>
       <div class="links">
         <a draggable="false" :href="links[0]" class="whatsapp-btn">
-          <img draggable="false" src="/img/icons/whatsapp.webp" alt="Whatsapp icon" />
+          <img draggable="false" :src="`${STORAGE_URL}/utils/whatsapp.webp`" alt="Whatsapp icon" />
         </a>
         <a draggable="false" :href="links[1]" class="email-btn">
-          <img draggable="false" src="/img/icons/contact.webp" alt="Email icon" />
+          <img draggable="false" :src="`${STORAGE_URL}/utils/contact.webp`" alt="Email icon" />
         </a>
       </div>
     </div>

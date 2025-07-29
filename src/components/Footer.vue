@@ -2,23 +2,23 @@
   <footer class="footer">
     <div class="items">
       <RouterLink to="/" class="item" draggable="false">
-        <img class="icon" src="/img/icons/perfil.png" draggable="false" />
+        <img class="icon" :src="`${STORAGE_URL}/utils/perfil.webp`" draggable="false" />
         <v-tooltip activator="parent" location="top"> {{ $t('profile') }} </v-tooltip>
       </RouterLink>
       <RouterLink to="/resume" class="item" draggable="false">
-        <img class="icon" src="/img/icons/resume.png" draggable="false" />
+        <img class="icon" :src="`${STORAGE_URL}/utils/resume.webp`" draggable="false" />
         <v-tooltip activator="parent" location="top"> {{ $t('resume') }} </v-tooltip>
       </RouterLink>
       <RouterLink to="/portfolio" class="item" draggable="false">
-        <img class="icon" src="/img/icons/portfolio.png" draggable="false" />
+        <img class="icon" :src="`${STORAGE_URL}/utils/portfolio.webp`" draggable="false" />
         <v-tooltip activator="parent" location="top"> {{ $t('portfolio') }} </v-tooltip>
       </RouterLink>
       <RouterLink to="/contact" class="item" draggable="false">
-        <img class="icon" src="/img/icons/contact.webp" draggable="false" />
+        <img class="icon" :src="`${STORAGE_URL}/utils/contact.webp`" draggable="false" />
         <v-tooltip activator="parent" location="top"> {{ $t('contact') }} </v-tooltip>
       </RouterLink>
       <a href="https://gitlab.com/reneraespteam" target="_blank" class="item">
-        <img class="icon" src="/img/icons/gitlab.png" alt="" draggable="false" />
+        <img class="icon" :src="`${STORAGE_URL}/utils/gitlab.webp`" alt="" draggable="false" />
         <v-tooltip activator="parent" location="top"> Gitlab </v-tooltip>
       </a>
       <!--<a href="https://www.linkedin.com/in/rene-ramirez-6674b31a5/" target="_blank" class="item">
@@ -26,11 +26,16 @@
         <v-tooltip activator="parent" location="top"> Linkedin </v-tooltip>
       </a>-->
       <a href="https://cert.efset.org/CgECYy" target="_blank" class="item">
-        <img class="icon" src="/img/icons/efset.jpeg" alt="" draggable="false" />
+        <img class="icon" :src="`${STORAGE_URL}/utils/efset.webp`" alt="" draggable="false" />
         <v-tooltip activator="parent" location="top"> EF Set </v-tooltip>
       </a>
       <a href="https://www.codewars.com/users/ReneRaEsp" target="_blank" class="item">
-        <img class="icon codewars" src="/img/icons/codewars.png" alt="" draggable="false" />
+        <img
+          class="icon codewars"
+          :src="`${STORAGE_URL}/utils/codewars.webp`"
+          alt=""
+          draggable="false"
+        />
         <v-tooltip activator="parent" location="top"> Codewars </v-tooltip>
       </a>
     </div>
@@ -39,6 +44,8 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+
+const STORAGE_URL = import.meta.env.VITE_STORAGE_URL
 </script>
 
 <style lang="scss" scoped>

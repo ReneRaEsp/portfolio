@@ -4,7 +4,7 @@
       <img
         @click="toggleShowMenu"
         class="menu-icon"
-        src="/img/icons/logo.svg"
+        :src="`${STORAGE_URL}/utils/logo.webp`"
         draggable="false"
         alt="Toggle Menu"
       />
@@ -13,8 +13,12 @@
       <img
         class="menu-icon"
         draggable="false"
-        :src="route.fullPath === '/' ? `/img/icons/perfil.png` : `/img/icons${route.fullPath}.png`"
-        alt=""
+        :src="
+          route.fullPath === '/'
+            ? `${STORAGE_URL}/utils/perfil.webp`
+            : `${STORAGE_URL}/utils${route.fullPath}.webp`
+        "
+        :alt="route.fullPath"
       />
       <div class="menu-indicator" v-if="route?.fullPath === '/'">{{ $t('profile') }}</div>
       <div class="menu-indicator" v-else-if="route?.fullPath === '/resume'">{{ $t('resume') }}</div>
@@ -30,7 +34,7 @@
         <p class="lang">{{ locale }}</p>
       </div>
       <div class="battery-cont">
-        <img src="/img/icons/battery.png" draggable="false" />
+        <img :src="`${STORAGE_URL}/utils/battery.webp`" draggable="false" />
       </div>
       <div class="date-cont">
         <p>{{ formatearHora(fechaHora) }}</p>
@@ -55,7 +59,7 @@ const showMenu = ref(false)
 const showLanguages = ref(false)
 const { locale } = useI18n()
 
-const urlBase = ref(import.meta.env.BASE_URL)
+const STORAGE_URL = import.meta.env.VITE_STORAGE_URL
 
 const actualizarHora = () => {
   fechaHora.value = new Date()

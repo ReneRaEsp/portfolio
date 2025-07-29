@@ -7,29 +7,37 @@
       </div>
       <router-link to="/">
         <div class="item" @click="toggleShowMenu">
-          <img src="/img/icons/perfil.png" alt="" /> {{ $t('profile') }}
+          <img :src="`${STORAGE_URL}/utils/perfil.webp`" :alt="`${$t('profile')}`" />
+          {{ $t('profile') }}
         </div></router-link
       >
       <router-link to="/resume">
         <div class="item" @click="toggleShowMenu">
-          <img src="/img/icons/resume.png" alt="" /> {{ $t('resume') }}
+          <img :src="`${STORAGE_URL}/utils/resume.webp`" :alt="`${$t('resume')}`" />
+          {{ $t('resume') }}
         </div></router-link
       >
       <router-link to="/portfolio">
         <div class="item" @click="toggleShowMenu">
-          <img src="/img/icons/portfolio.png" alt="" /> {{ $t('portfolio') }}
+          <img :src="`${STORAGE_URL}/utils/resume.webp`" :alt="`${$t('portfolio')}`" />
+          {{ $t('portfolio') }}
         </div></router-link
       >
       <router-link to="/contact">
         <div class="item" @click="toggleShowMenu">
-          <img src="/img/icons/contact.webp" alt="" /> {{ $t('contact') }}
+          <img :src="`${STORAGE_URL}/utils/contact.webp`" :alt="`${$t('contact')}`" />
+          {{ $t('contact') }}
         </div></router-link
       >
       <hr />
-      <div class="item"><img src="/img/icons/gitlab.png" alt="" /> Gitlab</div>
-      <div class="item"><img src="/img/icons/linkedin.png" alt="" /> Linkedin</div>
-      <div class="item"><img src="/img/icons/efset.jpeg" alt="" /> EF Set</div>
-      <div class="item"><img src="/img/icons/codewars.png" alt="" /> Codewars</div>
+      <div class="item"><img :src="`${STORAGE_URL}/utils/gitlab.webp`" alt="Gitlab" /> Gitlab</div>
+      <div class="item">
+        <img :src="`${STORAGE_URL}/utils/linkedin.webp`" alt="Linkedin" /> Linkedin
+      </div>
+      <div class="item"><img :src="`${STORAGE_URL}/utils/efset.webp`" alt="EF Set" /> EF Set</div>
+      <div class="item">
+        <img :src="`${STORAGE_URL}/utils/codewars.webp`" alt="codewars" /> Codewars
+      </div>
     </div>
   </div>
 </template>
@@ -39,6 +47,8 @@ import { defineProps } from 'vue'
 import { RouterLink } from 'vue-router'
 
 const props = defineProps({ toggleShowMenu: Function })
+
+const STORAGE_URL = import.meta.env.VITE_STORAGE_URL
 </script>
 
 <style lang="scss" scoped>

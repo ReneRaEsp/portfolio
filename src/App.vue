@@ -21,7 +21,7 @@ import Footer from './components/Footer.vue'
   background: #02111b;
   width: 100vw;
   height: 100vh;
-  padding-top: 30px;
+  padding-top: 15px;
   overflow: hidden;
 
   .dinamic-secction {

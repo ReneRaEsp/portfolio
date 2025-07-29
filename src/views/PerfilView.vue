@@ -31,7 +31,7 @@
           <div class="languages-cont">
             <div class="top">
               <div class="top-left">
-                <div class="chip">
+                <div class="chip chip-lang">
                   <p>{{ $t('languages') }}</p>
                 </div>
                 <a
@@ -41,7 +41,11 @@
                   class="ver"
                 >
                   {{ $t('view') }}
-                  <img draggable="false" src="/img/icons/view.svg" alt="View EFSet Certificate" />
+                  <img
+                    draggable="false"
+                    :src="`${STORAGE_URL}/utils/view.webp`"
+                    alt="View EFSet Certificate"
+                  />
                 </a>
                 <a
                   href="https://certificates-eu-west-1.efset.org/v2/certificates/CgECYy/pdf?locale=en"
@@ -52,7 +56,7 @@
                   {{ $t('download') }}
                   <img
                     draggable="false"
-                    src="/img/icons/download.svg"
+                    :src="`${STORAGE_URL}/utils/download.webp`"
                     alt="Download EFSet Certificate"
                   />
                 </a>
@@ -228,6 +232,7 @@ console.log(STORAGE_URL, principalSkills[0]?.name)
           padding-left: 20px;
           padding-top: 10px;
           border: 1px solid rgba(222, 222, 222, 0.7);
+          overflow-y: auto;
           &:hover {
             background: rgba(2, 60, 60, 0.12);
             backdrop-filter: blur(10px);
@@ -363,6 +368,7 @@ console.log(STORAGE_URL, principalSkills[0]?.name)
 @media screen and (max-width: 500px) {
   .chip {
     width: 100%;
+    padding: 20px 0;
     p {
       padding: 0px 7px;
       font-size: 14px;
@@ -370,10 +376,13 @@ console.log(STORAGE_URL, principalSkills[0]?.name)
   }
   .tech {
     width: 40px;
-    height: 70px;
+    height: 50px;
     img {
       width: 30px;
     }
+  }
+  .chip-lang {
+    padding: 20px 20px !important;
   }
   .contact {
     border-radius: 0px;
@@ -491,6 +500,8 @@ console.log(STORAGE_URL, principalSkills[0]?.name)
           .skills-cont {
             width: 100%;
             height: auto;
+            padding-top: 0px;
+            padding-bottom: 20px;
           }
           .languages-cont {
             width: 100%;
