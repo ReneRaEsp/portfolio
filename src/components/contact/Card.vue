@@ -6,8 +6,7 @@
     <div class="text" :class="{ 'text-with-image': image, 'text-complete': !image }">
       <a class="link" :href="link" target="_blank"> {{ text }} </a>
     </div>
-    <div v-if="image" class="img"><img draggable="false" :src="image" alt="copy icon" /></div>
-    <div v-else-if="link" class="copy-cont">
+    <div class="copy-cont">
       <Copy :textToCopy="text" />
     </div>
     <div v-if="image" class="copy-cont-mobile">
